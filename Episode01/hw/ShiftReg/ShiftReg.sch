@@ -1,0 +1,262 @@
+EESchema Schematic File Version 4
+LIBS:ShiftReg-cache
+EELAYER 26 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L atmel:AT89C2051-PU U1
+U 1 1 5DED36B0
+P 3450 3100
+F 0 "U1" H 3450 4378 50  0000 C CNN
+F 1 "AT89C2051-PU" H 3450 4287 50  0000 C CNN
+F 2 "Housings_DIP:DIP-20_W7.62mm" H 3450 3100 50  0001 C CIN
+F 3 "" H 3450 3100 50  0001 C CNN
+	1    3450 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C1
+U 1 1 5DED3726
+P 2100 2000
+F 0 "C1" H 2215 2046 50  0000 L CNN
+F 1 "100nF" H 2215 1955 50  0000 L CNN
+F 2 "" H 2138 1850 50  0001 C CNN
+F 3 "" H 2100 2000 50  0001 C CNN
+	1    2100 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2300 2100 2300
+Wire Wire Line
+	2100 2300 2100 2150
+Wire Wire Line
+	2100 1850 2100 1650
+$Comp
+L power:VCC #PWR?
+U 1 1 5DED37B0
+P 2100 1650
+F 0 "#PWR?" H 2100 1500 50  0001 C CNN
+F 1 "VCC" H 2117 1823 50  0000 C CNN
+F 2 "" H 2100 1650 50  0001 C CNN
+F 3 "" H 2100 1650 50  0001 C CNN
+	1    2100 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:Crystal Y1
+U 1 1 5DED38B1
+P 1750 3350
+F 0 "Y1" H 1750 3618 50  0000 C CNN
+F 1 "16 MHz" H 1750 3527 50  0000 C CNN
+F 2 "" H 1750 3350 50  0001 C CNN
+F 3 "" H 1750 3350 50  0001 C CNN
+	1    1750 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 2900 2000 2900
+Wire Wire Line
+	2000 2900 2000 3350
+Wire Wire Line
+	1900 3350 2000 3350
+Connection ~ 2000 3350
+Wire Wire Line
+	2000 3350 2000 3600
+Wire Wire Line
+	1600 3350 1500 3350
+Connection ~ 1500 3350
+Wire Wire Line
+	1500 3350 1500 3600
+$Comp
+L power:GND #PWR?
+U 1 1 5DED3A9C
+P 1500 4100
+F 0 "#PWR?" H 1500 3850 50  0001 C CNN
+F 1 "GND" H 1505 3927 50  0000 C CNN
+F 2 "" H 1500 4100 50  0001 C CNN
+F 3 "" H 1500 4100 50  0001 C CNN
+	1    1500 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DED3B56
+P 2000 4100
+F 0 "#PWR?" H 2000 3850 50  0001 C CNN
+F 1 "GND" H 2005 3927 50  0000 C CNN
+F 2 "" H 2000 4100 50  0001 C CNN
+F 3 "" H 2000 4100 50  0001 C CNN
+	1    2000 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C2
+U 1 1 5DED3CA0
+P 1500 3750
+F 0 "C2" H 1615 3796 50  0000 L CNN
+F 1 "22pF" H 1615 3705 50  0000 L CNN
+F 2 "" H 1538 3600 50  0001 C CNN
+F 3 "" H 1500 3750 50  0001 C CNN
+	1    1500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C3
+U 1 1 5DED3CF5
+P 2000 3750
+F 0 "C3" H 2115 3796 50  0000 L CNN
+F 1 "22pF" H 2115 3705 50  0000 L CNN
+F 2 "" H 2038 3600 50  0001 C CNN
+F 3 "" H 2000 3750 50  0001 C CNN
+	1    2000 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 3900 1500 4100
+Wire Wire Line
+	2000 3900 2000 4100
+Wire Wire Line
+	2300 2600 1500 2600
+Wire Wire Line
+	1500 2600 1500 3350
+Wire Wire Line
+	3450 2000 3850 2000
+Wire Wire Line
+	3850 2000 3850 1850
+$Comp
+L power:VCC #PWR?
+U 1 1 5DED41E8
+P 3850 1850
+F 0 "#PWR?" H 3850 1700 50  0001 C CNN
+F 1 "VCC" H 3867 2023 50  0000 C CNN
+F 2 "" H 3850 1850 50  0001 C CNN
+F 3 "" H 3850 1850 50  0001 C CNN
+	1    3850 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4100 3450 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5DED43D5
+P 3450 4250
+F 0 "#PWR?" H 3450 4000 50  0001 C CNN
+F 1 "GND" H 3455 4077 50  0000 C CNN
+F 2 "" H 3450 4250 50  0001 C CNN
+F 3 "" H 3450 4250 50  0001 C CNN
+	1    3450 4250
+	1    0    0    -1  
+$EndComp
+Text Notes 6350 7100 0    50   ~ 0
+Interface AT89C2051 to 74HC595 shift register\nBased on circuit by Piotr Bakalarski\nhttps://www.instructables.com/id/Introduction-to-8051-Programming-With-AT89C2051-gu/
+$Comp
+L 74xx:74HC595 U2
+U 1 1 5DED6A4A
+P 6650 3600
+F 0 "U2" H 6650 4378 50  0000 C CNN
+F 1 "74HC595" H 6650 4287 50  0000 C CNN
+F 2 "" H 6650 3600 50  0001 C CNN
+F 3 "" H 6650 3600 50  0001 C CNN
+	1    6650 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3200 4600 3200
+Wire Wire Line
+	6250 3400 5800 3400
+Wire Wire Line
+	5800 3400 5800 3300
+Wire Wire Line
+	5800 3300 4600 3300
+Wire Wire Line
+	6250 3700 5700 3700
+Wire Wire Line
+	5700 3700 5700 3400
+Wire Wire Line
+	5700 3400 4600 3400
+Wire Wire Line
+	6250 3500 6150 3500
+Wire Wire Line
+	6150 3500 6150 2850
+$Comp
+L power:VCC #PWR?
+U 1 1 5DED7436
+P 6150 2850
+F 0 "#PWR?" H 6150 2700 50  0001 C CNN
+F 1 "VCC" H 6167 3023 50  0000 C CNN
+F 2 "" H 6150 2850 50  0001 C CNN
+F 3 "" H 6150 2850 50  0001 C CNN
+	1    6150 2850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3200 7500 3200
+Wire Wire Line
+	7050 3300 7500 3300
+Wire Wire Line
+	7050 3400 7500 3400
+Wire Wire Line
+	7050 3500 7500 3500
+Wire Wire Line
+	7050 3600 7500 3600
+Wire Wire Line
+	7050 3700 7500 3700
+Wire Wire Line
+	7050 3800 7500 3800
+Wire Wire Line
+	7050 3900 7500 3900
+Wire Wire Line
+	6250 3800 6150 3800
+Wire Wire Line
+	6150 3800 6150 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5DED831B
+P 6150 4400
+F 0 "#PWR?" H 6150 4150 50  0001 C CNN
+F 1 "GND" H 6155 4227 50  0000 C CNN
+F 2 "" H 6150 4400 50  0001 C CNN
+F 3 "" H 6150 4400 50  0001 C CNN
+	1    6150 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 4300 6650 4400
+$Comp
+L power:GND #PWR?
+U 1 1 5DED8959
+P 6650 4400
+F 0 "#PWR?" H 6650 4150 50  0001 C CNN
+F 1 "GND" H 6655 4227 50  0000 C CNN
+F 2 "" H 6650 4400 50  0001 C CNN
+F 3 "" H 6650 4400 50  0001 C CNN
+	1    6650 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6650 3000 6950 3000
+Wire Wire Line
+	6950 3000 6950 2850
+$Comp
+L power:VCC #PWR?
+U 1 1 5DED97A1
+P 6950 2850
+F 0 "#PWR?" H 6950 2700 50  0001 C CNN
+F 1 "VCC" H 6967 3023 50  0000 C CNN
+F 2 "" H 6950 2850 50  0001 C CNN
+F 3 "" H 6950 2850 50  0001 C CNN
+	1    6950 2850
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
