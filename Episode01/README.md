@@ -8,4 +8,5 @@ The [hw](hw) directory has the circuits for each experiment.
 
 The [fw](fw) directory has the firmware programs for each experiment.
 
-Piotr Bakalarski's Instructable [Introduction to 8051 Programming With AT89C2051](https://www.instructables.com/id/Introduction-to-8051-Programming-With-AT89C2051-gu/) was incredibly helpful as a guide for getting started.
+Piotr Bakalarski's Instructable [Introduction to 8051 Programming With AT89C2051](https://www.instructables.com/id/Introduction-to-8051-Programming-With-AT89C2051-gu/) was incredibly helpful as a guide for getting started, and I shamelessly
+stole/adapted his schematics and code for my experiments.  Thanks, Piotr!
