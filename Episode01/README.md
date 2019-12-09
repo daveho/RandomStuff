@@ -1,5 +1,7 @@
 # Episode 1: 8051 family microcontrollers, initial experiments
 
+Link to video: <https://youtu.be/YitrSDJKMMU>
+
 In this episode I show some basic experiments with the Atmel AT89C2051
 microcontroller.  I am planning to use an 8051 family device (the
 87C51) as the keyboard controller for my [8 bit computer project](https://github.com/daveho/DIY8bit).
