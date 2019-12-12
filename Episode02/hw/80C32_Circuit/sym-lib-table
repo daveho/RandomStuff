@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name 74xx)(type Legacy)(uri ${KIPRJMOD}/74xx.lib)(options "")(descr ""))
+  (lib (name device)(type Legacy)(uri ${KIPRJMOD}/device.lib)(options "")(descr ""))
+  (lib (name power)(type Legacy)(uri ${KIPRJMOD}/power.lib)(options "")(descr ""))
+  (lib (name Switch)(type Legacy)(uri ${KIPRJMOD}/Switch.lib)(options "")(descr ""))
+  (lib (name P80C32SBPN)(type Legacy)(uri ${KIPRJMOD}/P80C32SBPN.lib)(options "")(descr ""))
+  (lib (name AT28C64E-15PC)(type Legacy)(uri ${KIPRJMOD}/AT28C64E-15PC.lib)(options "")(descr ""))
+)
