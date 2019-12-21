@@ -13,11 +13,10 @@
 #define SW_BIT  (1 << 1)
 
 int main() {
-	/* Set PD1 as input, all other PD pins as output */
-	DDRD = ~SW_BIT;
-
-	/* Initially set all PD output pins to high, and
+	/* Set PD1 as input, all other PD pins as output
+	 * Initially set all PD output pins to high, and
 	 * enable pull-up on PD1 */
+	DDRD = ~SW_BIT;
 	PORTD = 0xFF;
 
 	for (;;) {
