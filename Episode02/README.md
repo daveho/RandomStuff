@@ -1,6 +1,6 @@
 # Episode 2: Digital I/O: AVR vs. 8051
 
-Link to video: Coming soon
+Link to video: <https://youtu.be/I_YL9chcnso>
 
 This video explores an important difference in how digital I/O works on AVR and 8051-family microcontrollers, and shows how to implement robust digital I/O on the 8051 using bit instructions.
 
