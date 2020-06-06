@@ -34,6 +34,8 @@ Note that to do GPU-accelerated video encoding, you need to have a VAAPI driver.
 sudo apt-get install i965-va-driver-shaders
 ```
 
+One reason I like OBS Studio is that it can do transformations of the video input. For example, the way I have my overhead camera mounted requires rotating the captured video 180° (i.e., without rotation it would be upside-down): OBS studio can do this easily.  It also gives you lots of options for video and audio capture sources.
+
 Screencasting: [Kazam](https://launchpad.net/kazam); I'm just using the default version from the Ubuntu 18.04 repositories
 
 Graphics editing (for titles and overlays): [Gimp](https://www.gimp.org/); again, just the default Ubuntu 18.04 version
