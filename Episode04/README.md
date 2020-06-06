@@ -8,7 +8,7 @@ Note that I have no affiliation with any products or manufacturers mentioned her
 
 ## Hardware
 
-HDMI capture: [Blackmagic Intensity Pro 4K](https://www.amazon.com/Blackmagic-Design-Intensity-Capture-Playback/dp/B00U3QNP7Q); note that you will need to download an install the (closed source) drivers
+HDMI capture: [Blackmagic Intensity Pro 4K](https://www.amazon.com/Blackmagic-Design-Intensity-Capture-Playback/dp/B00U3QNP7Q); note that you will need to download and install the (closed source) drivers
 
 Camera: [Canon Vixia HF R600](https://www.amazon.com/Canon-VIXIA-Black-Discontinued-Manufacturer/dp/B00RKNO06K); I also have an R400, which works well, and I believe any of the models starting with the R200 are largely equivalent.
 
