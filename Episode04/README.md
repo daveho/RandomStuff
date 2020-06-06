@@ -1,6 +1,6 @@
 # Episode 2: 
 
-Link to video: Coming soon
+Link to video: <https://youtu.be/xyFBnrxw_VE>
 
 I made this video to document the hardware and software setup I use to making videos using Linux.  This page has links to the hardware and software mentioned in the video, as well as a few additional items.
 
