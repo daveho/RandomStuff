@@ -4,10 +4,10 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title ""
+Title "8048 LED blink circuit"
 Date ""
 Rev ""
-Comp ""
+Comp "daveho hacks"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -215,7 +215,7 @@ L 74xx:74LS573 U3
 U 1 1 5FE35C81
 P 6550 3600
 F 0 "U3" H 6550 4581 50  0000 C CNN
-F 1 "74LS573" H 6550 4490 50  0000 C CNN
+F 1 "74HCT573" H 6550 4490 50  0000 C CNN
 F 2 "" H 6550 3600 50  0001 C CNN
 F 3 "" H 6550 3600 50  0001 C CNN
 	1    6550 3600
@@ -664,6 +664,111 @@ Text Label 9200 3100 0    50   ~ 0
 AD6
 Text Label 9200 3200 0    50   ~ 0
 AD7
+$Comp
+L device:C C3
+U 1 1 5FFFEA93
+P 5500 1100
+F 0 "C3" H 5615 1146 50  0000 L CNN
+F 1 "100nF" H 5615 1055 50  0000 L CNN
+F 2 "" H 5538 950 50  0001 C CNN
+F 3 "" H 5500 1100 50  0001 C CNN
+	1    5500 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C4
+U 1 1 5FFFFBF9
+P 5950 1100
+F 0 "C4" H 6065 1146 50  0000 L CNN
+F 1 "100nF" H 6065 1055 50  0000 L CNN
+F 2 "" H 5988 950 50  0001 C CNN
+F 3 "" H 5950 1100 50  0001 C CNN
+	1    5950 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C5
+U 1 1 60005FC6
+P 6400 1100
+F 0 "C5" H 6515 1146 50  0000 L CNN
+F 1 "100nF" H 6515 1055 50  0000 L CNN
+F 2 "" H 6438 950 50  0001 C CNN
+F 3 "" H 6400 1100 50  0001 C CNN
+	1    6400 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C C6
+U 1 1 60005FD0
+P 6850 1100
+F 0 "C6" H 6965 1146 50  0000 L CNN
+F 1 "100nF" H 6965 1055 50  0000 L CNN
+F 2 "" H 6888 950 50  0001 C CNN
+F 3 "" H 6850 1100 50  0001 C CNN
+	1    6850 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 850  6200 750 
+$Comp
+L power:VCC #PWR?
+U 1 1 6000F2B6
+P 6200 750
+F 0 "#PWR?" H 6200 600 50  0001 C CNN
+F 1 "VCC" H 6217 923 50  0000 C CNN
+F 2 "" H 6200 750 50  0001 C CNN
+F 3 "" H 6200 750 50  0001 C CNN
+	1    6200 750 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 1350 6200 1450
+$Comp
+L power:GND #PWR?
+U 1 1 60013950
+P 6200 1450
+F 0 "#PWR?" H 6200 1200 50  0001 C CNN
+F 1 "GND" H 6205 1277 50  0000 C CNN
+F 2 "" H 6200 1450 50  0001 C CNN
+F 3 "" H 6200 1450 50  0001 C CNN
+	1    6200 1450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5500 950  5500 850 
+Wire Wire Line
+	5500 850  5950 850 
+Wire Wire Line
+	6850 850  6850 950 
+Connection ~ 6200 850 
+Wire Wire Line
+	6200 850  6400 850 
+Wire Wire Line
+	5950 950  5950 850 
+Connection ~ 5950 850 
+Wire Wire Line
+	5950 850  6200 850 
+Wire Wire Line
+	6400 950  6400 850 
+Connection ~ 6400 850 
+Wire Wire Line
+	6400 850  6850 850 
+Wire Wire Line
+	5500 1250 5500 1350
+Wire Wire Line
+	5500 1350 5950 1350
+Wire Wire Line
+	6850 1350 6850 1250
+Connection ~ 6200 1350
+Wire Wire Line
+	6200 1350 6400 1350
+Wire Wire Line
+	5950 1250 5950 1350
+Connection ~ 5950 1350
+Wire Wire Line
+	5950 1350 6200 1350
+Wire Wire Line
+	6400 1250 6400 1350
 Wire Bus Line
 	2450 3900 2450 6050
 Wire Bus Line
@@ -672,4 +777,9 @@ Wire Bus Line
 	9600 1950 9600 3100
 Wire Bus Line
 	5350 1950 5350 3700
+Connection ~ 6400 1350
+Wire Wire Line
+	6400 1350 6850 1350
+Text Notes 5050 750  0    50   ~ 0
+Decoupling caps for U1-U4
 $EndSCHEMATC
