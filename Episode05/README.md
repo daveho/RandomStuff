@@ -4,6 +4,13 @@ In this episode, we experiment with 8048 family microcontrollers.
 
 This is a work in progress, right now I'm just collecting information and planning an initial circuit.
 
-## Information resources
+The [hw](hw) directory has KiCad schematic(s) for the example circuit(s).
 
+The [fw](fw) directory has example programs.  You'll need [asm48](https://daveho.github.io/asm48/) to assemble them.
+
+## Resources
+
+* [asm48](https://daveho.github.io/asm48/): 8048 cross assembler, originally written by me, but greatly enhanced by JustBurn and sy2002
 * [8048 maze generator](https://hackaday.io/project/19278-8048-maze-generator): good example of a schematic incorporating the 8048, address latch, and external ROM
+* [MCS-48 Family User's Manual](http://bitsavers.trailing-edge.com/components/intel/8048/9800270D_MCS-48_Family_Users_Manual_Jul78.pdf): Intel documentation for 8048 family from 1978
+* [MCS-48 and UPI-41 Assembly Language Manual](http://bitsavers.trailing-edge.com/components/intel/8048/9800255D_MCS-48_and_UPI-41_Assembly_Language_Manual_Dec1978.pdf): best resource for assembly language programming of 8048 family devices
