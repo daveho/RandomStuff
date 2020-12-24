@@ -8,6 +8,11 @@ The [hw](hw) directory has KiCad schematic(s) for the example circuit(s).
 
 The [fw](fw) directory has example programs.  You'll need [asm48](https://daveho.github.io/asm48/) to assemble them.
 
+There are two schematics for the circuits demonstrated in the video:
+
+* [8048 LED Blink circuit](hw/8048_Blink/8048_Blink.pdf)
+* [8048 LED Blink circuit with pushbutton](hw/8048_Blink/8048_Blink-button.pdf)
+
 ## Resources
 
 * [asm48](https://daveho.github.io/asm48/): 8048 cross assembler, originally written by me, but greatly enhanced by JustBurn and sy2002
