@@ -1,7 +1,7 @@
 %.bin : %.asm
 	asm48 -o $*.bin $*.asm
 
-all : loop.bin button.bin
+all : loop.bin button.bin intr.bin
 
 clean :
 	rm -f *.bin
