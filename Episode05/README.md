@@ -1,6 +1,6 @@
 # Experiments with 8048 family microcontrollers
 
-Video link: Coming soon
+Video link: <https://youtu.be/K83uTnW6IHU>
 
 In this episode, we experiment with 8048 family microcontrollers.
 
