@@ -466,13 +466,10 @@ Text Label 3550 6950 0    50   ~ 0
 CA3
 Text Label 3550 7750 0    50   ~ 0
 CA4
-NoConn ~ 8950 6300
 Text Notes 8500 4650 0    50   ~ 0
 Digit 2
-NoConn ~ 9000 5250
 Text Notes 8500 3700 0    50   ~ 0
 Digit 1
-NoConn ~ 9000 4300
 Text Notes 8500 2750 0    50   ~ 0
 Digit 0
 Wire Wire Line
@@ -883,4 +880,8 @@ F 3 "~" H 9200 6100 50  0001 C CNN
 	1    9200 6100
 	1    0    0    -1  
 $EndComp
+NoConn ~ 9500 3350
+NoConn ~ 9500 4300
+NoConn ~ 9500 5250
+NoConn ~ 9500 6200
 $EndSCHEMATC
