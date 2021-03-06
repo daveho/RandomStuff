@@ -178,7 +178,7 @@ L device:R R1
 U 1 1 603D8792
 P 1150 1900
 F 0 "R1" V 1100 1650 50  0000 C CNN
-F 1 "680" V 1150 1900 50  0000 C CNN
+F 1 "330" V 1150 1900 50  0000 C CNN
 F 2 "" V 1080 1900 50  0001 C CNN
 F 3 "" H 1150 1900 50  0001 C CNN
 	1    1150 1900
@@ -191,7 +191,7 @@ L device:R R2
 U 1 1 603DFBC0
 P 1150 2000
 F 0 "R2" V 1100 1750 50  0000 C CNN
-F 1 "680" V 1150 2000 50  0000 C CNN
+F 1 "330" V 1150 2000 50  0000 C CNN
 F 2 "" V 1080 2000 50  0001 C CNN
 F 3 "" H 1150 2000 50  0001 C CNN
 	1    1150 2000
@@ -202,7 +202,7 @@ L device:R R3
 U 1 1 603E27DC
 P 1150 2100
 F 0 "R3" V 1100 1850 50  0000 C CNN
-F 1 "680" V 1150 2100 50  0000 C CNN
+F 1 "330" V 1150 2100 50  0000 C CNN
 F 2 "" V 1080 2100 50  0001 C CNN
 F 3 "" H 1150 2100 50  0001 C CNN
 	1    1150 2100
@@ -213,7 +213,7 @@ L device:R R4
 U 1 1 603E287F
 P 1150 2200
 F 0 "R4" V 1100 1950 50  0000 C CNN
-F 1 "680" V 1150 2200 50  0000 C CNN
+F 1 "330" V 1150 2200 50  0000 C CNN
 F 2 "" V 1080 2200 50  0001 C CNN
 F 3 "" H 1150 2200 50  0001 C CNN
 	1    1150 2200
@@ -224,7 +224,7 @@ L device:R R5
 U 1 1 603E5E32
 P 1150 2300
 F 0 "R5" V 1100 2050 50  0000 C CNN
-F 1 "680" V 1150 2300 50  0000 C CNN
+F 1 "330" V 1150 2300 50  0000 C CNN
 F 2 "" V 1080 2300 50  0001 C CNN
 F 3 "" H 1150 2300 50  0001 C CNN
 	1    1150 2300
@@ -235,7 +235,7 @@ L device:R R6
 U 1 1 603E5EF5
 P 1150 2400
 F 0 "R6" V 1100 2150 50  0000 C CNN
-F 1 "680" V 1150 2400 50  0000 C CNN
+F 1 "330" V 1150 2400 50  0000 C CNN
 F 2 "" V 1080 2400 50  0001 C CNN
 F 3 "" H 1150 2400 50  0001 C CNN
 	1    1150 2400
@@ -246,7 +246,7 @@ L device:R R7
 U 1 1 603E5F00
 P 1150 2500
 F 0 "R7" V 1100 2250 50  0000 C CNN
-F 1 "680" V 1150 2500 50  0000 C CNN
+F 1 "330" V 1150 2500 50  0000 C CNN
 F 2 "" V 1080 2500 50  0001 C CNN
 F 3 "" H 1150 2500 50  0001 C CNN
 	1    1150 2500
@@ -466,110 +466,44 @@ Text Label 3550 6950 0    50   ~ 0
 CA3
 Text Label 3550 7750 0    50   ~ 0
 CA4
-Text Notes 9550 6000 0    50   ~ 0
-10
-Text Notes 9550 6100 0    50   ~ 0
-9
-Text Notes 9550 6200 0    50   ~ 0
-8
-Text Notes 9550 6300 0    50   ~ 0
-7
-Text Notes 9550 6400 0    50   ~ 0
-6
-$Comp
-L Connector:Conn_01x05_Male J2
-U 1 1 604C519E
-P 9150 6200
-F 0 "J2" H 9258 6581 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9258 6490 50  0000 C CNN
-F 2 "" H 9150 6200 50  0001 C CNN
-F 3 "~" H 9150 6200 50  0001 C CNN
-	1    9150 6200
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x05_Male J6
-U 1 1 604C51A8
-P 9650 6200
-F 0 "J6" H 9758 6581 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9758 6490 50  0000 C CNN
-F 2 "" H 9650 6200 50  0001 C CNN
-F 3 "~" H 9650 6200 50  0001 C CNN
-	1    9650 6200
-	1    0    0    -1  
-$EndComp
-Text Notes 9050 5700 0    50   ~ 0
-Digit 3\n(most significant)
 Wire Wire Line
-	8950 6000 8400 6000
-Text Label 8450 6000 0    50   ~ 0
+	9000 5900 8450 5900
+Text Label 8500 5900 0    50   ~ 0
 CA1
 Wire Wire Line
-	9850 6400 10300 6400
-Text Label 10150 6400 0    50   ~ 0
+	9900 6300 10350 6300
+Text Label 10200 6300 0    50   ~ 0
 CA1
 Wire Wire Line
-	9850 6000 10300 6000
-Text Label 10200 6000 0    50   ~ 0
+	9900 5900 10350 5900
+Text Label 10250 5900 0    50   ~ 0
 A
 Wire Wire Line
-	9850 6100 10300 6100
-Text Label 10200 6100 0    50   ~ 0
+	9900 6000 10350 6000
+Text Label 10250 6000 0    50   ~ 0
 B
 Wire Wire Line
-	9850 6200 10300 6200
-Text Label 10200 6200 0    50   ~ 0
+	9900 6100 10350 6100
+Text Label 10250 6100 0    50   ~ 0
 C
 Wire Wire Line
-	8950 6400 8400 6400
-Text Label 8450 6400 0    50   ~ 0
+	9000 6300 8450 6300
+Text Label 8500 6300 0    50   ~ 0
 D
 Wire Wire Line
-	9850 6300 10300 6300
-Text Label 10200 6300 0    50   ~ 0
+	9900 6200 10350 6200
+Text Label 10250 6200 0    50   ~ 0
 E
 Wire Wire Line
-	8950 6100 8400 6100
-Text Label 8450 6100 0    50   ~ 0
+	9000 6000 8450 6000
+Text Label 8500 6000 0    50   ~ 0
 F
 Wire Wire Line
-	8950 6200 8400 6200
-Text Label 8450 6200 0    50   ~ 0
+	9000 6100 8450 6100
+Text Label 8500 6100 0    50   ~ 0
 G
 NoConn ~ 8950 6300
-Text Notes 9600 4950 0    50   ~ 0
-10
-Text Notes 9600 5050 0    50   ~ 0
-9
-Text Notes 9600 5150 0    50   ~ 0
-8
-Text Notes 9600 5250 0    50   ~ 0
-7
-Text Notes 9600 5350 0    50   ~ 0
-6
-$Comp
-L Connector:Conn_01x05_Male J5
-U 1 1 6058C917
-P 9200 5150
-F 0 "J5" H 9308 5531 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9308 5440 50  0000 C CNN
-F 2 "" H 9200 5150 50  0001 C CNN
-F 3 "~" H 9200 5150 50  0001 C CNN
-	1    9200 5150
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x05_Male J9
-U 1 1 6058C921
-P 9700 5150
-F 0 "J9" H 9808 5531 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9808 5440 50  0000 C CNN
-F 2 "" H 9700 5150 50  0001 C CNN
-F 3 "~" H 9700 5150 50  0001 C CNN
-	1    9700 5150
-	1    0    0    -1  
-$EndComp
-Text Notes 9100 4650 0    50   ~ 0
+Text Notes 8500 4650 0    50   ~ 0
 Digit 2
 Wire Wire Line
 	9000 4950 8450 4950
@@ -608,39 +542,7 @@ Wire Wire Line
 Text Label 8500 5150 0    50   ~ 0
 G
 NoConn ~ 9000 5250
-Text Notes 9600 4000 0    50   ~ 0
-10
-Text Notes 9600 4100 0    50   ~ 0
-9
-Text Notes 9600 4200 0    50   ~ 0
-8
-Text Notes 9600 4300 0    50   ~ 0
-7
-Text Notes 9600 4400 0    50   ~ 0
-6
-$Comp
-L Connector:Conn_01x05_Male J4
-U 1 1 60598816
-P 9200 4200
-F 0 "J4" H 9308 4581 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9308 4490 50  0000 C CNN
-F 2 "" H 9200 4200 50  0001 C CNN
-F 3 "~" H 9200 4200 50  0001 C CNN
-	1    9200 4200
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x05_Male J8
-U 1 1 60598820
-P 9700 4200
-F 0 "J8" H 9808 4581 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9808 4490 50  0000 C CNN
-F 2 "" H 9700 4200 50  0001 C CNN
-F 3 "~" H 9700 4200 50  0001 C CNN
-	1    9700 4200
-	1    0    0    -1  
-$EndComp
-Text Notes 9100 3700 0    50   ~ 0
+Text Notes 8500 3700 0    50   ~ 0
 Digit 1
 Wire Wire Line
 	9000 4000 8450 4000
@@ -679,39 +581,7 @@ Wire Wire Line
 Text Label 8500 4200 0    50   ~ 0
 G
 NoConn ~ 9000 4300
-Text Notes 9600 3050 0    50   ~ 0
-10
-Text Notes 9600 3150 0    50   ~ 0
-9
-Text Notes 9600 3250 0    50   ~ 0
-8
-Text Notes 9600 3350 0    50   ~ 0
-7
-Text Notes 9600 3450 0    50   ~ 0
-6
-$Comp
-L Connector:Conn_01x05_Male J3
-U 1 1 605A63F7
-P 9200 3250
-F 0 "J3" H 9308 3631 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9308 3540 50  0000 C CNN
-F 2 "" H 9200 3250 50  0001 C CNN
-F 3 "~" H 9200 3250 50  0001 C CNN
-	1    9200 3250
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x05_Male J7
-U 1 1 605A6401
-P 9700 3250
-F 0 "J7" H 9808 3631 50  0000 C CNN
-F 1 "Conn_01x05_Male" H 9808 3540 50  0000 C CNN
-F 2 "" H 9700 3250 50  0001 C CNN
-F 3 "~" H 9700 3250 50  0001 C CNN
-	1    9700 3250
-	1    0    0    -1  
-$EndComp
-Text Notes 9100 2750 0    50   ~ 0
+Text Notes 8500 2750 0    50   ~ 0
 Digit 0
 Wire Wire Line
 	9000 3050 8450 3050
@@ -766,17 +636,6 @@ Text Label 1750 3500 0    50   ~ 0
 SCK
 Text Notes 8850 2500 0    50   ~ 0
 Hex displays are HDSP-F501\nor similar (DIP 10, common\nanode). Adjust current limiting\nresistors (R1-R7) to suit.
-$Comp
-L Connector:Conn_01x06_Male J1
-U 1 1 60611D73
-P 7500 5500
-F 0 "J1" H 7608 5881 50  0000 C CNN
-F 1 "Conn_01x06_Male" H 7608 5790 50  0000 C CNN
-F 2 "" H 7500 5500 50  0001 C CNN
-F 3 "~" H 7500 5500 50  0001 C CNN
-	1    7500 5500
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	7300 5300 6950 5300
 Wire Wire Line
@@ -825,17 +684,6 @@ Text Label 6300 5800 0    50   ~ 0
 MOSI
 Text Notes 6650 4900 0    50   ~ 0
 AVR programming\nheader
-$Comp
-L Connector:Conn_01x02_Male J?
-U 1 1 606B6C95
-P 4850 5150
-F 0 "J?" H 4958 5331 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 4958 5240 50  0000 C CNN
-F 2 "" H 4850 5150 50  0001 C CNN
-F 3 "~" H 4850 5150 50  0001 C CNN
-	1    4850 5150
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5050 5150 5400 5150
 Wire Wire Line
@@ -893,17 +741,6 @@ Wire Wire Line
 	5400 5400 5400 5500
 Text Notes 5050 4600 0    50   ~ 0
 Power connector\nand decoupling cap
-$Comp
-L Connector:Conn_01x16_Male J?
-U 1 1 606E2BEC
-P 5600 6900
-F 0 "J?" H 5708 7781 50  0000 C CNN
-F 1 "Conn_01x16_Male" H 5708 7690 50  0000 C CNN
-F 2 "" H 5600 6900 50  0001 C CNN
-F 3 "~" H 5600 6900 50  0001 C CNN
-	1    5600 6900
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	5400 6200 4750 6200
 Wire Wire Line
@@ -968,4 +805,167 @@ Text Label 4800 7600 0    50   ~ 0
 D14
 Text Label 4800 7700 0    50   ~ 0
 D15
+$Comp
+L Connector_Generic:Conn_01x02 J9
+U 1 1 6044CE3B
+P 4850 5250
+F 0 "J9" H 4768 4925 50  0000 C CNN
+F 1 "Conn_01x02" H 4768 5016 50  0000 C CNN
+F 2 "" H 4850 5250 50  0001 C CNN
+F 3 "~" H 4850 5250 50  0001 C CNN
+	1    4850 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x16 J10
+U 1 1 6044F3A1
+P 5600 6900
+F 0 "J10" H 5680 6892 50  0000 L CNN
+F 1 "Conn_01x16" H 5680 6801 50  0000 L CNN
+F 2 "" H 5600 6900 50  0001 C CNN
+F 3 "~" H 5600 6900 50  0001 C CNN
+	1    5600 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J1
+U 1 1 60451854
+P 9200 3250
+F 0 "J1" H 9150 3700 50  0000 L CNN
+F 1 "Conn_01x05" H 9000 3600 50  0000 L CNN
+F 2 "" H 9200 3250 50  0001 C CNN
+F 3 "~" H 9200 3250 50  0001 C CNN
+	1    9200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 604CA7D9
+P 9200 4200
+F 0 "J3" H 9150 4650 50  0000 L CNN
+F 1 "Conn_01x05" H 9000 4550 50  0000 L CNN
+F 2 "" H 9200 4200 50  0001 C CNN
+F 3 "~" H 9200 4200 50  0001 C CNN
+	1    9200 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J5
+U 1 1 604DED1F
+P 9200 5150
+F 0 "J5" H 9150 5600 50  0000 L CNN
+F 1 "Conn_01x05" H 9000 5500 50  0000 L CNN
+F 2 "" H 9200 5150 50  0001 C CNN
+F 3 "~" H 9200 5150 50  0001 C CNN
+	1    9200 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J7
+U 1 1 604EEED1
+P 9200 6100
+F 0 "J7" H 9150 6550 50  0000 L CNN
+F 1 "Conn_01x05" H 9000 6450 50  0000 L CNN
+F 2 "" H 9200 6100 50  0001 C CNN
+F 3 "~" H 9200 6100 50  0001 C CNN
+	1    9200 6100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 604FDEE5
+P 7500 5500
+F 0 "J?" H 7580 5492 50  0000 L CNN
+F 1 "Conn_01x06" H 7580 5401 50  0000 L CNN
+F 2 "" H 7500 5500 50  0001 C CNN
+F 3 "~" H 7500 5500 50  0001 C CNN
+	1    7500 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 J2
+U 1 1 60559034
+P 9700 3250
+F 0 "J2" H 9700 2800 50  0000 C CNN
+F 1 "Conn_01x05" H 9650 2900 50  0000 C CNN
+F 2 "" H 9700 3250 50  0001 C CNN
+F 3 "~" H 9700 3250 50  0001 C CNN
+	1    9700 3250
+	-1   0    0    1   
+$EndComp
+Text Notes 9500 3050 0    50   ~ 0
+10
+Text Notes 9550 3150 0    50   ~ 0
+9
+Text Notes 9550 3250 0    50   ~ 0
+8
+Text Notes 9550 3350 0    50   ~ 0
+7
+Text Notes 9550 3450 0    50   ~ 0
+6
+$Comp
+L Connector_Generic:Conn_01x05 J4
+U 1 1 6055B61D
+P 9700 4200
+F 0 "J4" H 9700 3750 50  0000 C CNN
+F 1 "Conn_01x05" H 9650 3850 50  0000 C CNN
+F 2 "" H 9700 4200 50  0001 C CNN
+F 3 "~" H 9700 4200 50  0001 C CNN
+	1    9700 4200
+	-1   0    0    1   
+$EndComp
+Text Notes 9500 4000 0    50   ~ 0
+10
+Text Notes 9550 4100 0    50   ~ 0
+9
+Text Notes 9550 4200 0    50   ~ 0
+8
+Text Notes 9550 4300 0    50   ~ 0
+7
+Text Notes 9550 4400 0    50   ~ 0
+6
+$Comp
+L Connector_Generic:Conn_01x05 J6
+U 1 1 60567993
+P 9700 5150
+F 0 "J6" H 9700 4700 50  0000 C CNN
+F 1 "Conn_01x05" H 9650 4800 50  0000 C CNN
+F 2 "" H 9700 5150 50  0001 C CNN
+F 3 "~" H 9700 5150 50  0001 C CNN
+	1    9700 5150
+	-1   0    0    1   
+$EndComp
+Text Notes 9500 4950 0    50   ~ 0
+10
+Text Notes 9550 5050 0    50   ~ 0
+9
+Text Notes 9550 5150 0    50   ~ 0
+8
+Text Notes 9550 5250 0    50   ~ 0
+7
+Text Notes 9550 5350 0    50   ~ 0
+6
+$Comp
+L Connector_Generic:Conn_01x05 J8
+U 1 1 60567BE4
+P 9700 6100
+F 0 "J8" H 9700 5650 50  0000 C CNN
+F 1 "Conn_01x05" H 9650 5750 50  0000 C CNN
+F 2 "" H 9700 6100 50  0001 C CNN
+F 3 "~" H 9700 6100 50  0001 C CNN
+	1    9700 6100
+	-1   0    0    1   
+$EndComp
+Text Notes 9500 5900 0    50   ~ 0
+10
+Text Notes 9550 6000 0    50   ~ 0
+9
+Text Notes 9550 6100 0    50   ~ 0
+8
+Text Notes 9550 6200 0    50   ~ 0
+7
+Text Notes 9550 6300 0    50   ~ 0
+6
+Text Notes 8500 5700 0    50   ~ 0
+Digit 3\n(most significant)
 $EndSCHEMATC
