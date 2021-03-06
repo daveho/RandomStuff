@@ -471,7 +471,7 @@ Digit 2
 Text Notes 8500 3700 0    50   ~ 0
 Digit 1
 Text Notes 8500 2750 0    50   ~ 0
-Digit 0
+Digit 0\n(least significant/rightmost)
 Wire Wire Line
 	9000 3050 8450 3050
 Text Label 8500 3050 0    50   ~ 0
@@ -723,7 +723,7 @@ F 3 "~" H 7500 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 8500 5700 0    50   ~ 0
-Digit 3\n(most significant)
+Digit 3\n(most significant/leftmost)
 Wire Wire Line
 	9000 3350 8450 3350
 Text Label 8500 3350 0    50   ~ 0
@@ -731,7 +731,7 @@ E
 Wire Wire Line
 	9000 4000 8450 4000
 Text Label 8500 4000 0    50   ~ 0
-CA4
+CA3
 Wire Wire Line
 	9000 4400 8450 4400
 Text Label 8500 4400 0    50   ~ 0
@@ -751,7 +751,7 @@ E
 Wire Wire Line
 	9000 4950 8450 4950
 Text Label 8500 4950 0    50   ~ 0
-CA4
+CA2
 Wire Wire Line
 	9000 5350 8450 5350
 Text Label 8500 5350 0    50   ~ 0
@@ -771,7 +771,7 @@ E
 Wire Wire Line
 	9000 5900 8450 5900
 Text Label 8500 5900 0    50   ~ 0
-CA4
+CA1
 Wire Wire Line
 	9000 6300 8450 6300
 Text Label 8500 6300 0    50   ~ 0
@@ -791,7 +791,7 @@ E
 Wire Wire Line
 	9500 4400 9950 4400
 Text Label 9800 4400 0    50   ~ 0
-CA4
+CA3
 Wire Wire Line
 	9500 4000 9950 4000
 Text Label 9850 4000 0    50   ~ 0
@@ -807,7 +807,7 @@ C
 Wire Wire Line
 	9500 5350 9950 5350
 Text Label 9800 5350 0    50   ~ 0
-CA4
+CA2
 Wire Wire Line
 	9500 4950 9950 4950
 Text Label 9850 4950 0    50   ~ 0
@@ -823,7 +823,7 @@ C
 Wire Wire Line
 	9500 6300 9950 6300
 Text Label 9800 6300 0    50   ~ 0
-CA4
+CA1
 Wire Wire Line
 	9500 5900 9950 5900
 Text Label 9850 5900 0    50   ~ 0
