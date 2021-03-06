@@ -466,120 +466,12 @@ Text Label 3550 6950 0    50   ~ 0
 CA3
 Text Label 3550 7750 0    50   ~ 0
 CA4
-Wire Wire Line
-	9000 5900 8450 5900
-Text Label 8500 5900 0    50   ~ 0
-CA1
-Wire Wire Line
-	9900 6300 10350 6300
-Text Label 10200 6300 0    50   ~ 0
-CA1
-Wire Wire Line
-	9900 5900 10350 5900
-Text Label 10250 5900 0    50   ~ 0
-A
-Wire Wire Line
-	9900 6000 10350 6000
-Text Label 10250 6000 0    50   ~ 0
-B
-Wire Wire Line
-	9900 6100 10350 6100
-Text Label 10250 6100 0    50   ~ 0
-C
-Wire Wire Line
-	9000 6300 8450 6300
-Text Label 8500 6300 0    50   ~ 0
-D
-Wire Wire Line
-	9900 6200 10350 6200
-Text Label 10250 6200 0    50   ~ 0
-E
-Wire Wire Line
-	9000 6000 8450 6000
-Text Label 8500 6000 0    50   ~ 0
-F
-Wire Wire Line
-	9000 6100 8450 6100
-Text Label 8500 6100 0    50   ~ 0
-G
 NoConn ~ 8950 6300
 Text Notes 8500 4650 0    50   ~ 0
 Digit 2
-Wire Wire Line
-	9000 4950 8450 4950
-Text Label 8500 4950 0    50   ~ 0
-CA2
-Wire Wire Line
-	9900 5350 10350 5350
-Text Label 10200 5350 0    50   ~ 0
-CA2
-Wire Wire Line
-	9900 4950 10350 4950
-Text Label 10250 4950 0    50   ~ 0
-A
-Wire Wire Line
-	9900 5050 10350 5050
-Text Label 10250 5050 0    50   ~ 0
-B
-Wire Wire Line
-	9900 5150 10350 5150
-Text Label 10250 5150 0    50   ~ 0
-C
-Wire Wire Line
-	9000 5350 8450 5350
-Text Label 8500 5350 0    50   ~ 0
-D
-Wire Wire Line
-	9900 5250 10350 5250
-Text Label 10250 5250 0    50   ~ 0
-E
-Wire Wire Line
-	9000 5050 8450 5050
-Text Label 8500 5050 0    50   ~ 0
-F
-Wire Wire Line
-	9000 5150 8450 5150
-Text Label 8500 5150 0    50   ~ 0
-G
 NoConn ~ 9000 5250
 Text Notes 8500 3700 0    50   ~ 0
 Digit 1
-Wire Wire Line
-	9000 4000 8450 4000
-Text Label 8500 4000 0    50   ~ 0
-CA3
-Wire Wire Line
-	9900 4400 10350 4400
-Text Label 10200 4400 0    50   ~ 0
-CA3
-Wire Wire Line
-	9900 4000 10350 4000
-Text Label 10250 4000 0    50   ~ 0
-A
-Wire Wire Line
-	9900 4100 10350 4100
-Text Label 10250 4100 0    50   ~ 0
-B
-Wire Wire Line
-	9900 4200 10350 4200
-Text Label 10250 4200 0    50   ~ 0
-C
-Wire Wire Line
-	9000 4400 8450 4400
-Text Label 8500 4400 0    50   ~ 0
-D
-Wire Wire Line
-	9900 4300 10350 4300
-Text Label 10250 4300 0    50   ~ 0
-E
-Wire Wire Line
-	9000 4100 8450 4100
-Text Label 8500 4100 0    50   ~ 0
-F
-Wire Wire Line
-	9000 4200 8450 4200
-Text Label 8500 4200 0    50   ~ 0
-G
 NoConn ~ 9000 4300
 Text Notes 8500 2750 0    50   ~ 0
 Digit 0
@@ -608,10 +500,6 @@ Wire Wire Line
 Text Label 8500 3450 0    50   ~ 0
 D
 Wire Wire Line
-	9900 3350 10350 3350
-Text Label 10250 3350 0    50   ~ 0
-E
-Wire Wire Line
 	9000 3150 8450 3150
 Text Label 8500 3150 0    50   ~ 0
 F
@@ -619,7 +507,6 @@ Wire Wire Line
 	9000 3250 8450 3250
 Text Label 8500 3250 0    50   ~ 0
 G
-NoConn ~ 9000 3350
 Wire Wire Line
 	2250 1500 1500 1500
 Wire Wire Line
@@ -968,4 +855,116 @@ Text Notes 9550 6300 0    50   ~ 0
 6
 Text Notes 8500 5700 0    50   ~ 0
 Digit 3\n(most significant)
+Wire Wire Line
+	9000 3350 8450 3350
+Text Label 8500 3350 0    50   ~ 0
+E
+Wire Wire Line
+	9000 4000 8450 4000
+Text Label 8500 4000 0    50   ~ 0
+CA4
+Wire Wire Line
+	9000 4400 8450 4400
+Text Label 8500 4400 0    50   ~ 0
+D
+Wire Wire Line
+	9000 4100 8450 4100
+Text Label 8500 4100 0    50   ~ 0
+F
+Wire Wire Line
+	9000 4200 8450 4200
+Text Label 8500 4200 0    50   ~ 0
+G
+Wire Wire Line
+	9000 4300 8450 4300
+Text Label 8500 4300 0    50   ~ 0
+E
+Wire Wire Line
+	9000 4950 8450 4950
+Text Label 8500 4950 0    50   ~ 0
+CA4
+Wire Wire Line
+	9000 5350 8450 5350
+Text Label 8500 5350 0    50   ~ 0
+D
+Wire Wire Line
+	9000 5050 8450 5050
+Text Label 8500 5050 0    50   ~ 0
+F
+Wire Wire Line
+	9000 5150 8450 5150
+Text Label 8500 5150 0    50   ~ 0
+G
+Wire Wire Line
+	9000 5250 8450 5250
+Text Label 8500 5250 0    50   ~ 0
+E
+Wire Wire Line
+	9000 5900 8450 5900
+Text Label 8500 5900 0    50   ~ 0
+CA4
+Wire Wire Line
+	9000 6300 8450 6300
+Text Label 8500 6300 0    50   ~ 0
+D
+Wire Wire Line
+	9000 6000 8450 6000
+Text Label 8500 6000 0    50   ~ 0
+F
+Wire Wire Line
+	9000 6100 8450 6100
+Text Label 8500 6100 0    50   ~ 0
+G
+Wire Wire Line
+	9000 6200 8450 6200
+Text Label 8500 6200 0    50   ~ 0
+E
+Wire Wire Line
+	9900 4400 10350 4400
+Text Label 10200 4400 0    50   ~ 0
+CA4
+Wire Wire Line
+	9900 4000 10350 4000
+Text Label 10250 4000 0    50   ~ 0
+A
+Wire Wire Line
+	9900 4100 10350 4100
+Text Label 10250 4100 0    50   ~ 0
+B
+Wire Wire Line
+	9900 4200 10350 4200
+Text Label 10250 4200 0    50   ~ 0
+C
+Wire Wire Line
+	9900 5350 10350 5350
+Text Label 10200 5350 0    50   ~ 0
+CA4
+Wire Wire Line
+	9900 4950 10350 4950
+Text Label 10250 4950 0    50   ~ 0
+A
+Wire Wire Line
+	9900 5050 10350 5050
+Text Label 10250 5050 0    50   ~ 0
+B
+Wire Wire Line
+	9900 5150 10350 5150
+Text Label 10250 5150 0    50   ~ 0
+C
+Wire Wire Line
+	9900 6300 10350 6300
+Text Label 10200 6300 0    50   ~ 0
+CA4
+Wire Wire Line
+	9900 5900 10350 5900
+Text Label 10250 5900 0    50   ~ 0
+A
+Wire Wire Line
+	9900 6000 10350 6000
+Text Label 10250 6000 0    50   ~ 0
+B
+Wire Wire Line
+	9900 6100 10350 6100
+Text Label 10250 6100 0    50   ~ 0
+C
 $EndSCHEMATC
