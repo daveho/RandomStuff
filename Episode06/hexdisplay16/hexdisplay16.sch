@@ -480,20 +480,20 @@ Wire Wire Line
 Text Label 8500 3050 0    50   ~ 0
 CA4
 Wire Wire Line
-	9900 3450 10350 3450
-Text Label 10200 3450 0    50   ~ 0
+	9500 3450 9950 3450
+Text Label 9800 3450 0    50   ~ 0
 CA4
 Wire Wire Line
-	9900 3050 10350 3050
-Text Label 10250 3050 0    50   ~ 0
+	9500 3050 9950 3050
+Text Label 9850 3050 0    50   ~ 0
 A
 Wire Wire Line
-	9900 3150 10350 3150
-Text Label 10250 3150 0    50   ~ 0
+	9500 3150 9950 3150
+Text Label 9850 3150 0    50   ~ 0
 B
 Wire Wire Line
-	9900 3250 10350 3250
-Text Label 10250 3250 0    50   ~ 0
+	9500 3250 9950 3250
+Text Label 9850 3250 0    50   ~ 0
 C
 Wire Wire Line
 	9000 3450 8450 3450
@@ -602,10 +602,10 @@ F 3 "" H 5400 5500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L device:C C?
+L device:C C1
 U 1 1 606D296E
 P 5700 5200
-F 0 "C?" H 5815 5246 50  0000 L CNN
+F 0 "C1" H 5815 5246 50  0000 L CNN
 F 1 "100nF" H 5815 5155 50  0000 L CNN
 F 2 "" H 5738 5050 50  0001 C CNN
 F 3 "" H 5700 5200 50  0001 C CNN
@@ -693,10 +693,10 @@ D14
 Text Label 4800 7700 0    50   ~ 0
 D15
 $Comp
-L Connector_Generic:Conn_01x02 J9
+L Connector_Generic:Conn_01x02 J5
 U 1 1 6044CE3B
 P 4850 5250
-F 0 "J9" H 4768 4925 50  0000 C CNN
+F 0 "J5" H 4768 4925 50  0000 C CNN
 F 1 "Conn_01x02" H 4768 5016 50  0000 C CNN
 F 2 "" H 4850 5250 50  0001 C CNN
 F 3 "~" H 4850 5250 50  0001 C CNN
@@ -704,10 +704,10 @@ F 3 "~" H 4850 5250 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x16 J10
+L Connector_Generic:Conn_01x16 J6
 U 1 1 6044F3A1
 P 5600 6900
-F 0 "J10" H 5680 6892 50  0000 L CNN
+F 0 "J6" H 5680 6892 50  0000 L CNN
 F 1 "Conn_01x16" H 5680 6801 50  0000 L CNN
 F 2 "" H 5600 6900 50  0001 C CNN
 F 3 "~" H 5600 6900 50  0001 C CNN
@@ -715,144 +715,16 @@ F 3 "~" H 5600 6900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x05 J1
-U 1 1 60451854
-P 9200 3250
-F 0 "J1" H 9150 3700 50  0000 L CNN
-F 1 "Conn_01x05" H 9000 3600 50  0000 L CNN
-F 2 "" H 9200 3250 50  0001 C CNN
-F 3 "~" H 9200 3250 50  0001 C CNN
-	1    9200 3250
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x05 J3
-U 1 1 604CA7D9
-P 9200 4200
-F 0 "J3" H 9150 4650 50  0000 L CNN
-F 1 "Conn_01x05" H 9000 4550 50  0000 L CNN
-F 2 "" H 9200 4200 50  0001 C CNN
-F 3 "~" H 9200 4200 50  0001 C CNN
-	1    9200 4200
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x05 J5
-U 1 1 604DED1F
-P 9200 5150
-F 0 "J5" H 9150 5600 50  0000 L CNN
-F 1 "Conn_01x05" H 9000 5500 50  0000 L CNN
-F 2 "" H 9200 5150 50  0001 C CNN
-F 3 "~" H 9200 5150 50  0001 C CNN
-	1    9200 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x05 J7
-U 1 1 604EEED1
-P 9200 6100
-F 0 "J7" H 9150 6550 50  0000 L CNN
-F 1 "Conn_01x05" H 9000 6450 50  0000 L CNN
-F 2 "" H 9200 6100 50  0001 C CNN
-F 3 "~" H 9200 6100 50  0001 C CNN
-	1    9200 6100
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x06 J?
+L Connector_Generic:Conn_01x06 J7
 U 1 1 604FDEE5
 P 7500 5500
-F 0 "J?" H 7580 5492 50  0000 L CNN
+F 0 "J7" H 7580 5492 50  0000 L CNN
 F 1 "Conn_01x06" H 7580 5401 50  0000 L CNN
 F 2 "" H 7500 5500 50  0001 C CNN
 F 3 "~" H 7500 5500 50  0001 C CNN
 	1    7500 5500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x05 J2
-U 1 1 60559034
-P 9700 3250
-F 0 "J2" H 9700 2800 50  0000 C CNN
-F 1 "Conn_01x05" H 9650 2900 50  0000 C CNN
-F 2 "" H 9700 3250 50  0001 C CNN
-F 3 "~" H 9700 3250 50  0001 C CNN
-	1    9700 3250
-	-1   0    0    1   
-$EndComp
-Text Notes 9500 3050 0    50   ~ 0
-10
-Text Notes 9550 3150 0    50   ~ 0
-9
-Text Notes 9550 3250 0    50   ~ 0
-8
-Text Notes 9550 3350 0    50   ~ 0
-7
-Text Notes 9550 3450 0    50   ~ 0
-6
-$Comp
-L Connector_Generic:Conn_01x05 J4
-U 1 1 6055B61D
-P 9700 4200
-F 0 "J4" H 9700 3750 50  0000 C CNN
-F 1 "Conn_01x05" H 9650 3850 50  0000 C CNN
-F 2 "" H 9700 4200 50  0001 C CNN
-F 3 "~" H 9700 4200 50  0001 C CNN
-	1    9700 4200
-	-1   0    0    1   
-$EndComp
-Text Notes 9500 4000 0    50   ~ 0
-10
-Text Notes 9550 4100 0    50   ~ 0
-9
-Text Notes 9550 4200 0    50   ~ 0
-8
-Text Notes 9550 4300 0    50   ~ 0
-7
-Text Notes 9550 4400 0    50   ~ 0
-6
-$Comp
-L Connector_Generic:Conn_01x05 J6
-U 1 1 60567993
-P 9700 5150
-F 0 "J6" H 9700 4700 50  0000 C CNN
-F 1 "Conn_01x05" H 9650 4800 50  0000 C CNN
-F 2 "" H 9700 5150 50  0001 C CNN
-F 3 "~" H 9700 5150 50  0001 C CNN
-	1    9700 5150
-	-1   0    0    1   
-$EndComp
-Text Notes 9500 4950 0    50   ~ 0
-10
-Text Notes 9550 5050 0    50   ~ 0
-9
-Text Notes 9550 5150 0    50   ~ 0
-8
-Text Notes 9550 5250 0    50   ~ 0
-7
-Text Notes 9550 5350 0    50   ~ 0
-6
-$Comp
-L Connector_Generic:Conn_01x05 J8
-U 1 1 60567BE4
-P 9700 6100
-F 0 "J8" H 9700 5650 50  0000 C CNN
-F 1 "Conn_01x05" H 9650 5750 50  0000 C CNN
-F 2 "" H 9700 6100 50  0001 C CNN
-F 3 "~" H 9700 6100 50  0001 C CNN
-	1    9700 6100
-	-1   0    0    1   
-$EndComp
-Text Notes 9500 5900 0    50   ~ 0
-10
-Text Notes 9550 6000 0    50   ~ 0
-9
-Text Notes 9550 6100 0    50   ~ 0
-8
-Text Notes 9550 6200 0    50   ~ 0
-7
-Text Notes 9550 6300 0    50   ~ 0
-6
 Text Notes 8500 5700 0    50   ~ 0
 Digit 3\n(most significant)
 Wire Wire Line
@@ -920,51 +792,95 @@ Wire Wire Line
 Text Label 8500 6200 0    50   ~ 0
 E
 Wire Wire Line
-	9900 4400 10350 4400
-Text Label 10200 4400 0    50   ~ 0
+	9500 4400 9950 4400
+Text Label 9800 4400 0    50   ~ 0
 CA4
 Wire Wire Line
-	9900 4000 10350 4000
-Text Label 10250 4000 0    50   ~ 0
+	9500 4000 9950 4000
+Text Label 9850 4000 0    50   ~ 0
 A
 Wire Wire Line
-	9900 4100 10350 4100
-Text Label 10250 4100 0    50   ~ 0
+	9500 4100 9950 4100
+Text Label 9850 4100 0    50   ~ 0
 B
 Wire Wire Line
-	9900 4200 10350 4200
-Text Label 10250 4200 0    50   ~ 0
+	9500 4200 9950 4200
+Text Label 9850 4200 0    50   ~ 0
 C
 Wire Wire Line
-	9900 5350 10350 5350
-Text Label 10200 5350 0    50   ~ 0
+	9500 5350 9950 5350
+Text Label 9800 5350 0    50   ~ 0
 CA4
 Wire Wire Line
-	9900 4950 10350 4950
-Text Label 10250 4950 0    50   ~ 0
+	9500 4950 9950 4950
+Text Label 9850 4950 0    50   ~ 0
 A
 Wire Wire Line
-	9900 5050 10350 5050
-Text Label 10250 5050 0    50   ~ 0
+	9500 5050 9950 5050
+Text Label 9850 5050 0    50   ~ 0
 B
 Wire Wire Line
-	9900 5150 10350 5150
-Text Label 10250 5150 0    50   ~ 0
+	9500 5150 9950 5150
+Text Label 9850 5150 0    50   ~ 0
 C
 Wire Wire Line
-	9900 6300 10350 6300
-Text Label 10200 6300 0    50   ~ 0
+	9500 6300 9950 6300
+Text Label 9800 6300 0    50   ~ 0
 CA4
 Wire Wire Line
-	9900 5900 10350 5900
-Text Label 10250 5900 0    50   ~ 0
+	9500 5900 9950 5900
+Text Label 9850 5900 0    50   ~ 0
 A
 Wire Wire Line
-	9900 6000 10350 6000
-Text Label 10250 6000 0    50   ~ 0
+	9500 6000 9950 6000
+Text Label 9850 6000 0    50   ~ 0
 B
 Wire Wire Line
-	9900 6100 10350 6100
-Text Label 10250 6100 0    50   ~ 0
+	9500 6100 9950 6100
+Text Label 9850 6100 0    50   ~ 0
 C
+$Comp
+L Connector_Generic:Conn_02x05_Counter_Clockwise J1
+U 1 1 6060FA50
+P 9200 3250
+F 0 "J1" H 9250 3667 50  0000 C CNN
+F 1 "Conn_02x05_Counter_Clockwise" H 9250 3576 50  0000 C CNN
+F 2 "" H 9200 3250 50  0001 C CNN
+F 3 "~" H 9200 3250 50  0001 C CNN
+	1    9200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Counter_Clockwise J2
+U 1 1 60639211
+P 9200 4200
+F 0 "J2" H 9250 4617 50  0000 C CNN
+F 1 "Conn_02x05_Counter_Clockwise" H 9250 4526 50  0000 C CNN
+F 2 "" H 9200 4200 50  0001 C CNN
+F 3 "~" H 9200 4200 50  0001 C CNN
+	1    9200 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Counter_Clockwise J3
+U 1 1 6064A1C9
+P 9200 5150
+F 0 "J3" H 9250 5567 50  0000 C CNN
+F 1 "Conn_02x05_Counter_Clockwise" H 9250 5476 50  0000 C CNN
+F 2 "" H 9200 5150 50  0001 C CNN
+F 3 "~" H 9200 5150 50  0001 C CNN
+	1    9200 5150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Counter_Clockwise J4
+U 1 1 6064A521
+P 9200 6100
+F 0 "J4" H 9250 6517 50  0000 C CNN
+F 1 "Conn_02x05_Counter_Clockwise" H 9250 6426 50  0000 C CNN
+F 2 "" H 9200 6100 50  0001 C CNN
+F 3 "~" H 9200 6100 50  0001 C CNN
+	1    9200 6100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
