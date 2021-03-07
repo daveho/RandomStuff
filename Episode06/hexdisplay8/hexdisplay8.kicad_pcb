@@ -964,7 +964,7 @@
   (gr_text "https://github.com/daveho/RandomStuff/tree/master/\n  Episode06/hexdisplay8" (at 137 99.9) (layer F.SilkS)
     (effects (font (size 0.75 0.75) (thickness 0.15)) (justify left))
   )
-  (gr_text "(c) 2021 daveho hacks" (at 174.2 120.8) (layer F.SilkS)
+  (gr_text "(c) 2021 daveho hacks" (at 174.1 120.6) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (gr_line (start 136.1 122) (end 192.3 122) (layer Edge.Cuts) (width 0.05) (tstamp 6045C92B))
