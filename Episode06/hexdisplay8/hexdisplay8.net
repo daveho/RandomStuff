@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/daveho/git/RandomStuff/Episode06/hexdisplay8/hexdisplay8.sch)
-    (date "Sun 07 Mar 2021 01:23:29 PM EST")
+    (date "Sun 07 Mar 2021 01:34:14 PM EST")
     (tool "Eeschema 5.1.9-73d0e3b20d~88~ubuntu20.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -17,7 +17,7 @@
   (components
     (comp (ref U1)
       (value ATTINY2313A-SU)
-      (footprint Package_QFP:LQFP-44_10x10mm_P0.8mm)
+      (footprint Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm)
       (fields
         (field (name MPN) ATTINY2313A-SU)
         (field (name OC_FARNELL) 1841617)
