@@ -1,4 +1,4 @@
-// hexdisplay08 firmware
+// hexdisplay8 firmware
 // Copyright (c) 2017-2021, David H. Hovemeyer <david.hovemeyer@gmail.com>
 //
 // Permission is hereby granted, free of charge, to any person obtaining
