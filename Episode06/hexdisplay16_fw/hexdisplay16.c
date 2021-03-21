@@ -88,6 +88,10 @@ void update_display(void) {
 }
 
 int main(void) {
+	// disable JTAG, otherwise port C pins won't work correctly
+	MCUCR |= (1 << JTD);
+	MCUCR |= (1 << JTD);
+
 	// ports C and D are data inputs, configure them for input and
 	// enable internal pull-ups
 	DDRC = 0x00;     // set port C for input
