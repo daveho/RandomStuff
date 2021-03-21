@@ -34,6 +34,10 @@
 #define F (1<<5)
 #define G (1<<6)
 
+// Font for hex digits 0-F: values are inverted because
+// we're using common anode LED displays, so we need to
+// output a low voltage to permit current to flow from
+// the common anode through a segment LED.
 const uint8_t g_hexfont[16] = {
 	~(A|B|C|D|E|F),
 	~(B|C),
@@ -60,14 +64,14 @@ void update_display(void) {
 	uint8_t val;
 	switch (which) {
 	case 0: // most significant hex digit
-		val = (PINB >> 4) & 0x0f;
+		val = (PINB >> 4) & 0x0f;       // get high 4 bits of input
 		PORTA = ~1;                     // turn on CA1
 		PORTD = g_hexfont[val];         // output to most significant hex digit
 		break;
 	case 1: // least significant hex digit
-		val = PINB & 0x0f;
-		PORTB = ~2;
-		PORTA = g_hexfont[val];
+		val = PINB & 0x0f;              // get low 4 bits of input
+		PORTB = ~2;                     // turn on CA2
+		PORTA = g_hexfont[val];         // output to least significant hex digit
 		break;
 	}
 	g_count++;
@@ -83,6 +87,6 @@ int main(void) {
 
 	for (;;) {
 		update_display();
-		_delay_ms(12);
+		_delay_ms(8);
 	}
 }
