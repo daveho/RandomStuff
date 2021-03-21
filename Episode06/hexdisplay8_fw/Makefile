@@ -1,4 +1,4 @@
-PROG = hexdisplay08
+PROG = hexdisplay8
 GCC_MCU = attiny2313a
 AVRDUDE_MCU = t2313
 
