@@ -70,8 +70,8 @@ void update_display(void) {
 		break;
 	case 1: // least significant hex digit
 		val = PINB & 0x0f;              // get low 4 bits of input
-		PORTB = ~2;                     // turn on CA2
-		PORTA = g_hexfont[val];         // output to least significant hex digit
+		PORTA = ~2;                     // turn on CA2
+		PORTD = g_hexfont[val];         // output to least significant hex digit
 		break;
 	}
 	g_count++;
@@ -80,10 +80,10 @@ void update_display(void) {
 int main(void) {
 	DDRB = 0x00;     // set port B for input
 	PORTB = 0xFF;    // enable internal pull-ups on port B pins
-	DDRD = 0x7F;     // enable D7..D0 for output
+	DDRD = 0x7F;     // enable port D pins 0-6 for output
 	PORTD = 0x7F;    // all LED segments off
 	DDRA = 0x03;     // enable A0 and A1 as output
-	PORTA = 0x03;    // disable common anodes
+	PORTA = 0x03;    // turn off common anodes
 
 	for (;;) {
 		update_display();
