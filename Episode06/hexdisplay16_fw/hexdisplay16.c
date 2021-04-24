@@ -110,6 +110,6 @@ int main(void) {
 
 	for (;;) {
 		update_display();
-		_delay_ms(8);
+		_delay_ms(2);
 	}
 }
