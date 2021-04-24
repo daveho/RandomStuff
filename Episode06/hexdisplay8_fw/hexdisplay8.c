@@ -65,12 +65,12 @@ void update_display(void) {
 	switch (which) {
 	case 0: // most significant hex digit
 		val = (PINB >> 4) & 0x0f;       // get high 4 bits of input
-		PORTA = ~2;                     // turn on CA1 (using PA1)
+		PORTA = ~1;                     // turn on CA2 (using PA0)
 		PORTD = g_hexfont[val];         // output to most significant hex digit
 		break;
 	case 1: // least significant hex digit
 		val = PINB & 0x0f;              // get low 4 bits of input
-		PORTA = ~1;                     // turn on CA2 (using PA0)
+		PORTA = ~2;                     // turn on CA1 (using PA1)
 		PORTD = g_hexfont[val];         // output to least significant hex digit
 		break;
 	}
@@ -87,6 +87,6 @@ int main(void) {
 
 	for (;;) {
 		update_display();
-		_delay_ms(8);
+		_delay_ms(4);
 	}
 }

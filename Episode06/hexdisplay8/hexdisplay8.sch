@@ -303,9 +303,9 @@ Wire Wire Line
 	3450 3700 3650 3700
 Wire Wire Line
 	3450 3800 3650 3800
-Text Notes 7600 3400 0    50   ~ 0
+Text Notes 7600 2300 0    50   ~ 0
 Left digit (most significant)
-Text Notes 7550 2350 0    50   ~ 0
+Text Notes 7550 3350 0    50   ~ 0
 Right digit (least significant)
 $Comp
 L device:R R8
