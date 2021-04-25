@@ -769,24 +769,24 @@ Wire Wire Line
 Text Label 8500 5250 0    50   ~ 0
 E
 Wire Wire Line
-	9000 5900 8450 5900
-Text Label 8500 5900 0    50   ~ 0
-CA1
-Wire Wire Line
-	9000 6300 8450 6300
-Text Label 8500 6300 0    50   ~ 0
-D
-Wire Wire Line
 	9000 6000 8450 6000
 Text Label 8500 6000 0    50   ~ 0
-F
+CA1
+Wire Wire Line
+	9000 6400 8450 6400
+Text Label 8500 6400 0    50   ~ 0
+D
 Wire Wire Line
 	9000 6100 8450 6100
 Text Label 8500 6100 0    50   ~ 0
-G
+F
 Wire Wire Line
 	9000 6200 8450 6200
 Text Label 8500 6200 0    50   ~ 0
+G
+Wire Wire Line
+	9000 6300 8450 6300
+Text Label 8500 6300 0    50   ~ 0
 E
 Wire Wire Line
 	9500 4400 9950 4400
@@ -821,20 +821,20 @@ Wire Wire Line
 Text Label 9850 5150 0    50   ~ 0
 C
 Wire Wire Line
-	9500 6300 9950 6300
-Text Label 9800 6300 0    50   ~ 0
+	9500 6400 9950 6400
+Text Label 9800 6400 0    50   ~ 0
 CA1
-Wire Wire Line
-	9500 5900 9950 5900
-Text Label 9850 5900 0    50   ~ 0
-A
 Wire Wire Line
 	9500 6000 9950 6000
 Text Label 9850 6000 0    50   ~ 0
-B
+A
 Wire Wire Line
 	9500 6100 9950 6100
 Text Label 9850 6100 0    50   ~ 0
+B
+Wire Wire Line
+	9500 6200 9950 6200
+Text Label 9850 6200 0    50   ~ 0
 C
 $Comp
 L Connector_Generic:Conn_02x05_Counter_Clockwise J1
@@ -872,18 +872,18 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_02x05_Counter_Clockwise J4
 U 1 1 6064A521
-P 9200 6100
-F 0 "J4" H 9250 6517 50  0000 C CNN
-F 1 "Conn_02x05_Counter_Clockwise" H 9250 6426 50  0000 C CNN
-F 2 "Package_DIP:DIP-10_W7.62mm" H 9200 6100 50  0001 C CNN
-F 3 "~" H 9200 6100 50  0001 C CNN
-	1    9200 6100
+P 9200 6200
+F 0 "J4" H 9250 6617 50  0000 C CNN
+F 1 "Conn_02x05_Counter_Clockwise" H 9250 6526 50  0000 C CNN
+F 2 "Package_DIP:DIP-10_W7.62mm" H 9200 6200 50  0001 C CNN
+F 3 "~" H 9200 6200 50  0001 C CNN
+	1    9200 6200
 	1    0    0    -1  
 $EndComp
 NoConn ~ 9500 3350
 NoConn ~ 9500 4300
 NoConn ~ 9500 5250
-NoConn ~ 9500 6200
+NoConn ~ 9500 6300
 Text Notes 4950 700  0    50   ~ 0
 atmega324, 644, and 1284 variants in\nTQFP-44 packages should also work
 $EndSCHEMATC
