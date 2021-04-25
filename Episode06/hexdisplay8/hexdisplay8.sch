@@ -570,4 +570,6 @@ Wire Wire Line
 Connection ~ 2300 1950
 Wire Wire Line
 	2300 1950 2300 2050
+Text Notes 3600 4350 0    50   ~ 0
+Resistance of R1-R7 should\nbe adjusted based on brightness\nof LED displays.  (330 Ohms is\nlikely too high for standard\nLEDs.)
 $EndSCHEMATC

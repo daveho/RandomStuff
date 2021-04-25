@@ -884,4 +884,6 @@ NoConn ~ 9500 3350
 NoConn ~ 9500 4300
 NoConn ~ 9500 5250
 NoConn ~ 9500 6200
+Text Notes 4950 700  0    50   ~ 0
+atmega324, 644, and 1284 variants in\nTQFP-44 packages should also work
 $EndSCHEMATC
