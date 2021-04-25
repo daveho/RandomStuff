@@ -1,6 +1,6 @@
 # Random Stuff Episode 6: Breadboard hex displays
 
-Link to video: coming soon
+Link to video: <https://youtu.be/qxXhR1gmqUE>
 
 In this episode, we update the design of the 8 and 16 bit (2 and 4 digit)
 hex displays seen in previous episodes (mostly in the
