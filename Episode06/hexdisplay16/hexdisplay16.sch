@@ -8,9 +8,9 @@ Title "16 bit hex display"
 Date ""
 Rev ""
 Comp "daveho hacks"
-Comment1 ""
-Comment2 ""
-Comment3 ""
+Comment1 "https://ohwr.org/cern_ohl_p_v2.txt"
+Comment2 "Open source hardware"
+Comment3 "Copyright (c) 2021, David H. Hovemeyer"
 Comment4 ""
 $EndDescr
 $Comp
