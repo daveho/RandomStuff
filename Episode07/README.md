@@ -1,6 +1,6 @@
 # Random Stuff Episode 7: Slightly better hex displays
 
-Link to video: coming soon
+Link to video: <https://youtu.be/nyYqotV60bU>
 
 This is just a quick video with some additional progress on the hex displays
 featured in the [Episode 6](../Episode06):
