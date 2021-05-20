@@ -7,7 +7,7 @@
       "Application": "Pcbnew",
       "Version":     "5.1.10-88a1d61d58~88~ubuntu20.04.1"
     },
-    "CreationDate":  "2021-05-20T12:50:06-04:00"
+    "CreationDate":  "2021-05-20T13:29:31-04:00"
   },
   "GeneralSpecs":
   {
@@ -50,16 +50,6 @@
       "FilePolarity":  "Positive"
     },
     {
-      "Path":  "hexdisplay8-F_Paste.gbr",
-      "FileFunction":  "SolderPaste,Top",
-      "FilePolarity":  "Positive"
-    },
-    {
-      "Path":  "hexdisplay8-B_Paste.gbr",
-      "FileFunction":  "SolderPaste,Bot",
-      "FilePolarity":  "Positive"
-    },
-    {
       "Path":  "hexdisplay8-F_SilkS.gbr",
       "FileFunction":  "Legend,Top",
       "FilePolarity":  "Positive"
@@ -92,10 +82,6 @@
       "Notes":  "Layer F.SilkS"
     },
     {
-      "Type":  "SolderPaste",
-      "Notes":  "Layer F.Paste"
-    },
-    {
       "Type":  "SolderMask",
       "Notes":  "Layer F.Mask"
     },
@@ -115,10 +101,6 @@
     {
       "Type":  "SolderMask",
       "Notes":  "Layer B.Mask"
-    },
-    {
-      "Type":  "SolderPaste",
-      "Notes":  "Layer B.Paste"
     },
     {
       "Type":  "Legend",
