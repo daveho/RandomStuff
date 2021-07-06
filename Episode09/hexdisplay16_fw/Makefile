@@ -1,6 +1,12 @@
 PROG = hexdisplay16
+
+# Uncomment for atmega164a
 GCC_MCU = atmega164a
 AVRDUDE_MCU = m164a
+
+# Uncomment for atmega324pa
+#GCC_MCU = atmega324pa
+#AVRDUDE_MCU = m324pa
 
 CC = avr-gcc
 CFLAGS = -Os -Wall $(POWER_MODE) \
@@ -8,13 +14,18 @@ CFLAGS = -Os -Wall $(POWER_MODE) \
 
 OBJCOPY = avr-objcopy
 
-# This is correct for the $10 USB programmer from alldav.com
-AVRDUDE_PROGRAMMER = stk500v2
-#AVRDUDE_PROGRAMMER = buspirate
-
-AVRDUDE_PORT = /dev/ttyUSB0
+# If the AVR programmer appears as a serial port, define it here
+#AVRDUDE_PORT = /dev/ttyUSB0
 #AVRDUDE_PORT = COM4
-#AVRDUDE_PORT = COM6
+
+# Uncomment one of the following options depending on what
+# AVR programmer you are using
+
+# This is correct for the $10 USB programmer from alldav.com
+#AVRDUDE_OPTIONS = -P $(AVRDUDE_PORT) -c stk500v2
+
+# USBtinyISP, either the real one from Adafruit, or a clone
+AVRDUDE_OPTIONS = -c usbtiny
 
 # Avrdude flags
 AVRDUDE_FLAGS = 
@@ -33,7 +44,7 @@ $(PROG).hex : $(PROG).elf
 	$(OBJCOPY) -O ihex -R .eeprom $(PROG).elf $(PROG).hex
 
 program : $(PROG).hex
-	avrdude -p $(AVRDUDE_MCU) -P $(AVRDUDE_PORT) -c $(AVRDUDE_PROGRAMMER) $(AVRDUDE_FLAGS) -U flash:w:$(PROG).hex
+	avrdude -p $(AVRDUDE_MCU) $(AVRDUDE_OPTIONS) $(AVRDUDE_FLAGS) -U flash:w:$(PROG).hex
 
 clean :
 	rm -f *.o *.elf *.hex *.map
