@@ -1,6 +1,6 @@
 # Random Stuff Episode 8: Ultimate breadboard hex displays
 
-![img/hexdisplays.jpb](Picture of hex displays in a test circuit)
+![img/hexdisplays.jpg](Picture of hex displays in a test circuit)
 
 Link to video: Coming soon
 
