@@ -2,7 +2,7 @@
 
 ![Picture of hex displays in a test circuit](img/hexdisplays.jpg)
 
-Link to video: Coming soon
+Link to video: <https://youtu.be/3n3JZ8ZGDgM>
 
 In this video we will create the "ultimate" versions of the 8 and 16
 bit breadboard hex displays using the blue 7-segment displays from
