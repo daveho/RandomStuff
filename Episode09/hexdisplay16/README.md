@@ -17,12 +17,7 @@ J5        | 2 pos pin header (breadboard power rails) | (d)    | 2.54mm spacing
 J6        | 16 pos pin header (breadboard input)      | (d)    | 2.54mm spacing
 J7        | 6 pos pin header (AVR programming header) | (e)    | 2.54mm spacing
 
-(a) The value will depend greatly on the type of LED used in the displays.
-220 Ω is likely too high for standard-brightness LEDs, since the displays
-are only lit 1/4 of the time.  I'm guessing 100 Ω or so will work better for
-standard-brightness LEDs, but I haven't been able to test this theory.
-Modern bright LEDs will likely require a larger resistor value.
-In general, 1/8 W rated resistors should be fine.
+(a) I used 110Ω resistors.
 
 (b) The transistor should be able to handle at least 100 mA of current.
 (Most parts marked as MMBT3906 that I've seen will handle 150 mA or more.)
@@ -38,6 +33,6 @@ inside the breadboard.
 (e) I use the cheaper square profile pin headers for this connector, since
 it's only used when programming the microcontroller.
 
-(f) I think that other members of this series, such as the atmega324,
-atmega644, and atmega1284 will also work.  Just make sure it's in
+(f) The atmega324a will also work.  I'm guessing other members of the family
+(with the same pinout) should work, too. Just make sure it's in
 a TQFP-44 package.

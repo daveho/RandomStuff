@@ -17,10 +17,7 @@ J3        | 2 pos pin header (breadboard power rails) | (d)    | 2.54mm spacing
 J4        | 8 pos pin header (breadboard input)       | (d)    | 2.54mm spacing
 J5        | 6 pos pin header (AVR programming header) | (e)    | 2.54mm spacing
 
-(a) The value will depend greatly on the type of LED used in the displays.
-220 Ω is reasonable for most standard-brightness LEDs, although a lower value
-might be better.  Modern bright LEDs will likely require a larger resistor
-value.  In general, 1/8 W rated resistors should be fine.
+(a) I used 220Ω resistors.
 
 (b) The transistor should be able to handle at least 100 mA of current.
 (Most parts marked as MMBT3906 that I've seen will handle 150 mA or more.)
