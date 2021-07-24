@@ -12,7 +12,7 @@ R1-R7     | LED segment current limiting resistor     | (a)    | 0805
 R8-R11    | transistor base resistor                  | 4.7 kΩ | 0805
 Q1-Q4     | MMBT3906 PNP transistor                   | (b)    | SOT-23
 U1        | atmega164a microcontroller                | (f)    | TQFP-44
-J11/J12, J21/J22, J31/J32, J41/J42 | common anode hex display  | (c)    | DIP-10
+J11/J12, J21/J22, J31/J32, J41/J42 | common anode hex display  | (c)    | 0.2" DIP-10
 J5        | 2 pos pin header (breadboard power rails) | (d)    | 2.54mm spacing
 J6        | 16 pos pin header (breadboard input)      | (d)    | 2.54mm spacing
 J7        | 6 pos pin header (AVR programming header) | (e)    | 2.54mm spacing
