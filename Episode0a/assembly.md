@@ -85,7 +85,10 @@ legs are firmly attached.
 If you haven't already done so, solder the header pins. You should now
 have something that looks like this:
 
-*TODO: picture*
+![solder M48T59Y on lower PCB](img/assembly-step2.jpg)
+
+[Note that the device in the above photo is actually an M48T58Y.
+Please pretend it's a M48T59Y.]
 
 ### Step 3: test the partially-complete module
 
@@ -132,16 +135,28 @@ Also, solder the stacking headers onto the lower PCB. My approach is to put
 in the stacking headers, then fit the upper PCB on them, flip the whole thing
 upside-down, then solder the stacking headers to the bottom of the lower PCB.
 Doing this with the upper PCB fitted keeps the stacking header pins aligned
-correctly. You should end up with something that looks like this:
+correctly:
 
-*TODO: picture*
+![preparing to solder the stacking header pins on the bottom PCB](img/assembly-step6a.jpg)
+
+Once you're done you should end up with something that looks like this:
+
+![bottom PCB with crystal and stacking headers soldered](img/assembly-step6b.jpg)
+
+[Again, apologies for this photo showing a M48T58Y rather than a
+M48T59Y.]
 
 ### Step 7: test again using bench PSU to provide "battery" power
 
 The stacking headers closest to the battery connectors are uses to
 connect the battery to the chip. Using clip leads, apply 3.2V DC to
-the chip's battery connections. Then, re-test the module using the
-Test sketch. You will need to run the test twice.
+the chip's battery connections:
+
+![feeding "battery" power to the bottom PCB using clip leads](img/assembly-step7.jpg)
+
+[Once again, this photo shows an M48T58Y rather than an M48T59Y.]
+
+Then, re-test the module using the test sketch. You will need to run the test twice.
 
 The first time you run the test, the initial memory verification will
 fail, but the second memory verification will succeed. (The clock tests
