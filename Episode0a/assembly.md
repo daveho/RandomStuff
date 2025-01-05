@@ -1,4 +1,4 @@
-# Assembling the M48Y59Y replacement module
+# Assembling the M48T59Y replacement module
 
 ## Parts list
 
