@@ -1,5 +1,9 @@
 # Assembling the M48T59Y replacement module
 
+**Disclaimer**: Please understand that I make absolutely no guarantees about
+the correctness or suitability of the module design or assembly instructions.
+Use them at your own risk.
+
 ## Parts list
 
 Part | Description | Link/Note
