@@ -28,11 +28,11 @@ in order to expose the connections to the internal battery, soldering
 wires to them, and connecting the wires to a coin cell battery holder
 (click photos to embiggen):
 
-<a href="img/m48t59y_battery_mod_1.jpg"><img alt="M48T59Y battery mod 1/2" src="m48t59y_battery_mod_1_sm.jpg"></a>
+![M48T59Y battery mod 1/3](img/m48t59y_battery_mod_1.jpg)
 
-<a href="img/m48t59y_battery_mod_2.jpg"><img alt="M48T59Y battery mod 1/2" src="m48t59y_battery_mod_2_sm.jpg"></a>
+![M48T59Y battery mod 2/3](img/m48t59y_battery_mod_2.jpg)
 
-<a href="img/m48t59y_battery_mod_2.jpg"><img alt="M48T59Y battery mod 1/2" src="m48t59y_battery_mod_2_sm.jpg"></a>
+![M48T59Y battery mod 3/3](img/m48t59y_battery_mod_3.jpg)
 
 There are two disadvantages to this approach:
 
@@ -63,7 +63,7 @@ a 32.768 kHz watch crystal, and header pins on the lower PCB, a coin cell
 battery holder on the upper PCB, and stacking headers to join the two PCBs.
 I was actually able to make this work:
 
-<a href="img/m48t59y_replacement.jpg"><img alt="M48T59Y battery mod 1/2" src="m48t59y_replacement_sm.jpg"></a>
+![M48T59Y replacement module](img/m48t59y_replacement.jpg)
 
 [Ignore the Github URL on the PCB silkscreen: the project files are here in this
 Github repo. I will update the silkscreen on future revisions.]
@@ -92,7 +92,7 @@ replacement module) still leaves a couple of remaining issues:
 To address these issues, I designed and built a testing and programming circuit
 using an Arduino Nano:
 
-<a href="img/tester_programmer.jpg"><img alt="M48T59Y battery mod 1/2" src="tester_programmer_sm.jpg"></a>
+![M48T59Y tester/programmer](img/tester_programmer.jpg)
 
 There are two Arduino sketches (just load the one you want to use into the
 Arduino Nano.)
