@@ -19,6 +19,9 @@ Note that your header pins should be the thin/round machined kind.
 The standard square ones won't fit, and would damage the IC socket
 on the motherboard when you try to plug the module in.
 
+Also note that the coin cell battery holder seems to be a fairly standard
+design, so there are likely other parts you could use here.
+
 Obviously you'll also need the two PCBs (from the [SunBladeNVRAM](../SunBladeNVRAM)
 KiCad project). I highly recommend [OSHPark](https://oshpark.com/) for fab services
 (just upload the `.kicad_pcb` files and you're good to go.)
