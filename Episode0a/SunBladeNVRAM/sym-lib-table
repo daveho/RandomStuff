@@ -1,0 +1,5 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "BU1632SM-JJ-GTR")(type "KiCad")(uri "${KIPRJMOD}/BU1632SM-JJ-GTR.kicad_sym")(options "")(descr ""))
+  (lib (name "M48T59Y-70MH1")(type "Legacy")(uri "${KIPRJMOD}/M48T59Y-70MH1.lib")(options "")(descr ""))
+)
