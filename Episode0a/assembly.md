@@ -29,7 +29,7 @@ them before getting the headers in place you won't be able to get the headers
 in. (Ask me how I know this...)
 
 So, here is the assembly procedure that I have found works acceptably. It's still
-going to be a pain in the butt, but no more so than taking a dremel to a
+going to be a pain in the butt, but (IMO) no more so than taking a dremel to a
 M48T59Y-70PC1.
 
 ### Step 1: pins in breadboard, lower PCB on pins
