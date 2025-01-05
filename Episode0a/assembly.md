@@ -88,7 +88,7 @@ have something that looks like this:
 ![solder M48T59Y on lower PCB](img/assembly-step2.jpg)
 
 [Note that the device in the above photo is actually an M48T58Y.
-Please pretend it's a M48T59Y.]
+Please pretend it's an M48T59Y.]
 
 ### Step 3: test the partially-complete module
 
