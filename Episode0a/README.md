@@ -97,10 +97,10 @@ using an Arduino Nano:
 There are two Arduino sketches (just load the one you want to use into the
 Arduino Nano.)
 
-* <Test_M48T59Y/Test_M48T59Y.ino>: the test sketch (press GO to start
-  the test; if you hold down LOG when you press GO any data validation
-  errors will be logged)
-* <Program_M48T59Y/Program_M48T59Y.ino>: the programming sketch
-  (edit the code to fill in the machine type information and MAC
-  address, upload it to the Nano, then press GO to program the
+* [Test\_M48T59Y/Test\_M48T59Y.ino](Test_M48T59Y/Test_M48T59Y.ino):
+  the test sketch (press GO to start the test; if you hold down LOG when
+  you press GO any data validation errors will be logged)
+* [Program\_M48T59Y/Program\_M48T59Y.ino](Program_M48T59Y/Program_M48T59Y.ino):
+  the programming sketch (edit the code to fill in the machine type information
+  and MAC address, upload it to the Nano, then press GO to program the
   correct IDPROM information into the M48T59Y)
