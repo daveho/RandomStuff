@@ -181,8 +181,7 @@ bool idprom_write() {
   idprom_data[8] = 0x00;
   idprom_data[9] = 0x00;
   idprom_data[10] = 0x00;
-  idprom_data[11] = 0x00;  // put your main code here, to run repeatedly:
-
+  idprom_data[11] = 0x00;
 
   // last three hostid bytes, which are the same as the last three
   // MAC address bytes
