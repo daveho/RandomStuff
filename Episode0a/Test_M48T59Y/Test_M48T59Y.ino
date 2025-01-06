@@ -56,7 +56,7 @@
 // For very short delays
 #define NOP() __asm__ __volatile__ ("nop\n\t")
 
-void assertAddr(uint16_t addr) {
+void assert_addr(uint16_t addr) {
   for (uint8_t i = 0; i < 16; ++i) {
     // assert one bit of address
     digitalWrite( SHIFTREG_DATA, (addr & 0x8000) != 0 );
@@ -113,6 +113,10 @@ uint8_t rng_gen() {
   return result;
 }
 
+// Keep track of which direction the bus is configured for,
+// so m48t59y_read and m48t59y_write can switch as needed
+bool reading_from_bus;
+
 // Set up DDRC and DDRB for reading from the M48T59Y.
 void configure_data_bus_for_read() {
   DDRC = 0x00;
@@ -120,25 +124,31 @@ void configure_data_bus_for_read() {
   // disable all pull ups
   PORTC = 0x00;
   PORTB = 0x00;
+  reading_from_bus = true;
 }
 
 // Set up DDRC and DDRB for writing to the M48T59Y.
 void configure_data_bus_for_write() {
   DDRC = 0x0F;
   DDRB = 0x0F;
+  reading_from_bus = false;
 }
 
 uint8_t m48t59y_read( uint16_t addr ) {
+  if ( !reading_from_bus )
+    configure_data_bus_for_read();
+
   uint8_t data;
   digitalWrite( M48T59Y_NW, 1 ); // make sure write is de-asserted
-  assertAddr( addr );
+  assert_addr( addr );
   NOP();
   digitalWrite( M48T59Y_NE, 0 ); // enable chip
   NOP();
   digitalWrite( M48T59Y_NG, 0 ); // enable output
+  NOP(); // multiple NOPs to ensure at least 70ns for data to be available
   NOP();
-  data = ((PINB & 0x0F) << 4) | (PINC & 0x0F);
   NOP();
+  data = ((PINB & 0x0F) << 4) | (PINC & 0x0F); // read data
   digitalWrite( M48T59Y_NG, 1 ); // disable output
   digitalWrite( M48T59Y_NE, 1 ); // disable chip
   return data;
@@ -148,14 +158,19 @@ uint8_t m48t59y_read( uint16_t addr ) {
 // are both set to 0x0F so that we can assert data to the M48T59Y's
 // data pins.
 void m48t59y_write( uint16_t addr, uint8_t data ) {
+  if ( reading_from_bus )
+    configure_data_bus_for_write();
+
   digitalWrite( M48T59Y_NW, 1 ); // make sure write signal is de-asserted
-  assertAddr( addr );
+  assert_addr( addr );
   PORTC = (PORTC & 0xF0) | (data & 0xF); // output low nybble of data
   PORTB = (PORTB & 0xF0) | ((data >> 4) & 0xF); // output high nybble of data
   NOP();
   digitalWrite( M48T59Y_NE, 0 ); // enable chip
   NOP();
   digitalWrite( M48T59Y_NW, 0 ); // enable write
+  NOP(); // ensure 70 ns to allow chip to register the data being written
+  NOP();
   NOP();
   digitalWrite( M48T59Y_NW, 1 ); // disable write
   NOP();
@@ -167,8 +182,6 @@ uint8_t tests_passed, tests_executed;
 // Verify the contents of memory written previously by writeMem()
 void verify_mem( bool log_mismatch = false ) {
   Serial.print( "Verifying memory contents..." );
-
-  configure_data_bus_for_read();
 
   uint16_t addr = 0;
   uint16_t mismatch = 0;
@@ -210,8 +223,6 @@ void verify_mem( bool log_mismatch = false ) {
 void write_mem() {
   Serial.print( "Writing memory contents..." );
 
-  configure_data_bus_for_write();
-
   uint16_t addr = 0;
   uint16_t mismatch = 0;
   uint8_t data, expected;
@@ -235,8 +246,6 @@ uint8_t bcd_to_dec( uint8_t bcd ) {
 
 void set_time_and_date() {
   Serial.println( "Setting time and date..." );
-
-  configure_data_bus_for_write();
 
   // set the W bit in the control register
   // (note that we are leaving the calibration bits as 0,
@@ -270,12 +279,10 @@ void verify_clock_running() {
   Serial.println( "Verifying that clock is counting up..." );
 
   // set R bit in control register
-  configure_data_bus_for_write();
   m48t59y_write( M48T59Y_CONTROL, 0x40 );
 
   // read current value of seconds register (will probably be 1)
   uint8_t cur_sec;
-  configure_data_bus_for_read();
   cur_sec = m48t59y_read( M48T59Y_SECONDS );
   cur_sec = bcd_to_dec( cur_sec );
   Serial.print( "  initial seconds=" );
@@ -283,19 +290,15 @@ void verify_clock_running() {
   Serial.println();
 
   // clear R bit so that registers are updated again
-  configure_data_bus_for_write();
   m48t59y_write( M48T59Y_CONTROL, 0x00 );
-  configure_data_bus_for_read();
 
   // wait for three seconds
   delay( 3000 );
 
   // set R bit in control register again
-  configure_data_bus_for_write();
   m48t59y_write( M48T59Y_CONTROL, 0x40 );
 
   // read updated second count
-  configure_data_bus_for_read();
   uint8_t now_sec = m48t59y_read( M48T59Y_SECONDS );
   now_sec = bcd_to_dec( now_sec );
   Serial.print( "  updated seconds (after 3s delay)=" );
@@ -324,37 +327,16 @@ void runTests( bool log ) {
   Serial.print( "/" );
   Serial.print( tests_executed );
   Serial.println( " tests passed" );
-
-/*
-  uint8_t data;
-
-  configure_data_bus_for_write();
-  m48t59y_write( 0x123, 0xDA );
-  configure_data_bus_for_read();
-  data = m48t59y_read( 0x123 );
-  Serial.print( "Wrote 0xDA, read 0x" );
-  Serial.print( (uint16_t) data, HEX );
-  Serial.println( "" );
-
-  configure_data_bus_for_write();
-  m48t59y_write( 0x456, 0x00 );
-  configure_data_bus_for_read();
-  data = m48t59y_read( 0x456 );
-  Serial.print( "Wrote 0x00, read 0x" );
-  Serial.print( (uint16_t) data, HEX );
-  Serial.println( "" );
-
-  configure_data_bus_for_write();
-  m48t59y_write( 0x789, 0xFF );
-  configure_data_bus_for_read();
-  data = m48t59y_read( 0x789 );
-  Serial.print( "Wrote 0xFF, read 0x" );
-  Serial.print( (uint16_t) data, HEX );
-  Serial.println( "" );
-*/
 }
 
 void setup() {
+  // de-select M48T59Y, disable output, disable write
+  // (do this before enabling these pins as outputs, to avoid
+  // spurious activation of the M48T59Y)
+  digitalWrite( M48T59Y_NW, 1 );
+  digitalWrite( M48T59Y_NG, 1 );
+  digitalWrite( M48T59Y_NE, 1 );
+
   // set shift register and M48T59Y control pins as outputs
   pinMode( SHIFTREG_DATA, OUTPUT );
   pinMode( SHIFTREG_SCLK, OUTPUT );
@@ -366,11 +348,6 @@ void setup() {
   // set serial and register clock low initially
   digitalWrite( SHIFTREG_SCLK, 0 );
   digitalWrite( SHIFTREG_RCLK, 0 );
-
-  // de-select M48T59Y, disable output, disable write
-  digitalWrite( M48T59Y_NW, 1 );
-  digitalWrite( M48T59Y_NG, 1 );
-  digitalWrite( M48T59Y_NE, 1 );
 
   // set data bus pins to input
   configure_data_bus_for_read();
