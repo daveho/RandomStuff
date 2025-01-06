@@ -244,6 +244,17 @@ uint8_t bcd_to_dec( uint8_t bcd ) {
   return (bcd >> 4)*10 + (bcd & 0xF);
 }
 
+// Test date/time values
+// (03:40 PM on Jan 3, 2025, which is approximately when I wrote
+// the date/time test code initially)
+#define TEST_SECONDS  0x00
+#define TEST_MINUTES  0x40
+#define TEST_HOUR     0x15
+#define TEST_DAY      0x06
+#define TEST_DATE     0x03
+#define TEST_MONTH    0x01
+#define TEST_YEAR     0x25
+
 void set_time_and_date() {
   Serial.println( "Setting time and date..." );
 
@@ -253,15 +264,14 @@ void set_time_and_date() {
   // oscillator should run)
   m48t59y_write( M48T59Y_CONTROL, 0x80 );
 
-  // set time and date to 03:40 PM on Jan 3, 2025
-  // (which is approximately when I am writing this code)
-  m48t59y_write( M48T59Y_SECONDS, 0x00 );
-  m48t59y_write( M48T59Y_MINUTES, 0x40 );
-  m48t59y_write( M48T59Y_HOUR, 0x15 );
-  m48t59y_write( M48T59Y_DAY, 0x06 );
-  m48t59y_write( M48T59Y_DATE, 0x03 );
-  m48t59y_write( M48T59Y_MONTH, 0x01 );
-  m48t59y_write( M48T59Y_YEAR, 0x25 );
+  // set time and date to test values
+  m48t59y_write( M48T59Y_SECONDS, TEST_SECONDS );
+  m48t59y_write( M48T59Y_MINUTES, TEST_MINUTES );
+  m48t59y_write( M48T59Y_HOUR, TEST_HOUR );
+  m48t59y_write( M48T59Y_DAY, TEST_DAY );
+  m48t59y_write( M48T59Y_DATE, TEST_DATE );
+  m48t59y_write( M48T59Y_MONTH, TEST_MONTH );
+  m48t59y_write( M48T59Y_YEAR, TEST_YEAR );
 
   // clear the W bit
   m48t59y_write( M48T59Y_CONTROL, 0x00 );
@@ -272,9 +282,45 @@ void set_time_and_date() {
   delay( 1000 );
 }
 
+bool check_rtc_reg( uint16_t addr, uint8_t expected, const char *name ) {
+  uint8_t data = m48t59y_read( addr );
+  if ( data != expected ) {
+    Serial.print( "  Mismatch in " );
+    Serial.print( name );
+    Serial.print( " register (E=" );
+    Serial.print( expected, HEX );
+    Serial.print( ",A=" );
+    Serial.print( data, HEX );
+    Serial.println( ")" );
+    return false;
+  }
+  return true;
+}
+
+// Verify that the date and time values programmed by set_time_and_date()
+// can be read back
+void verify_time_and_date() {
+  Serial.println( "Test reading back time/date values..." );
+  bool good = true;
+  if ( !check_rtc_reg( M48T59Y_MINUTES, TEST_MINUTES, "minutes" ) ) good = false;
+  if ( !check_rtc_reg( M48T59Y_HOUR, TEST_HOUR, "hour" ) ) good = false;
+  if ( !check_rtc_reg( M48T59Y_DAY, TEST_DAY, "day" ) ) good = false;
+  if ( !check_rtc_reg( M48T59Y_DATE, TEST_DATE, "date" ) ) good = false;
+  if ( !check_rtc_reg( M48T59Y_MONTH, TEST_MONTH, "month" ) ) good = false;
+  if ( !check_rtc_reg( M48T59Y_YEAR, TEST_YEAR, "year" ) ) good = false;
+
+  if ( good ) {
+    Serial.println( "  Passed, all values were read back as expected" );
+    ++tests_passed;
+  } else
+    Serial.println( "  FAILED, one or more values did not match" );
+
+  ++tests_executed;
+}
+
 // Verify that the clock is running by seeing the second
 // counter increase. Given that it was previously set to 0,
-// we should need to worry about it rolling over during this test.
+// we shouldn't need to worry about it rolling over during this test.
 void verify_clock_running() {
   Serial.println( "Verifying that clock is counting up..." );
 
@@ -307,20 +353,24 @@ void verify_clock_running() {
 
   // expect the updated second count to have increased by 3 or 4
   if ( cur_sec + 3 == now_sec || cur_sec + 4 == now_sec ) {
-    Serial.println( "Passed, seconds seem to be updating" );
+    Serial.println( "  Passed, seconds seem to be updating" );
     ++tests_passed;
   } else {
-    Serial.println( "Failed, seconds are not updating correctly?" );
+    Serial.println( "  FAILED, seconds are not updating correctly?" );
   }
 
   ++tests_executed;
 }
 
 void runTests( bool log ) {
+  tests_passed = 0;
+  tests_executed = 0;
+
   verify_mem( log );
   write_mem();
   verify_mem( log );
   set_time_and_date();
+  verify_time_and_date();
   verify_clock_running();
 
   Serial.print( tests_passed );
@@ -368,9 +418,6 @@ void loop() {
     bool log = ( (PINC & LOG) == 0 );
     if ( log )
       Serial.println( "LOG pressed, will log data mismatches" );
-
-    tests_passed = 0;
-    tests_executed = 0;
     
     runTests( log );
   }
