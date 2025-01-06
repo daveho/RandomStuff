@@ -65,11 +65,8 @@ I was actually able to make this work:
 
 ![M48T59Y replacement module](img/m48t59y_replacement.jpg)
 
-[Ignore the Github URL on the PCB silkscreen: the project files are here in this
-Github repo. I will update the silkscreen on future revisions.]
-
 Note that there are **significant compromises in the design of the lower PCB**,
-and **it is very difficult to solder the components on the lower PCB**. I did eventually
+and **it is fairly difficult to solder the components on the lower PCB**. I did eventually
 arrive at an approach that works to some degree. The following document describes
 the assembly steps (and also has the part list):
 
