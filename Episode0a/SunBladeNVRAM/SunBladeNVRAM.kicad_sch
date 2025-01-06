@@ -1260,174 +1260,6 @@
 				)
 			)
 		)
-		(symbol "Device:Crystal"
-			(pin_numbers hide)
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Y"
-				(at 0 3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Crystal"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Two pin crystal"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "quartz ceramic resonator oscillator"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Crystal*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Crystal_0_1"
-				(rectangle
-					(start -1.143 2.54)
-					(end 1.143 -2.54)
-					(stroke
-						(width 0.3048)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -1.905 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 -1.27) (xy -1.905 1.27)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.905 -1.27) (xy 1.905 1.27)
-					)
-					(stroke
-						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.905 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Crystal_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "M48T59Y-70MH1:M48T59Y-70MH1"
 			(pin_names
 				(offset 1.016)
@@ -2017,16 +1849,6 @@
 	)
 	(wire
 		(pts
-			(xy 54.61 130.81) (xy 54.61 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "029944da-73fe-48de-ac54-49f7db66bd42")
-	)
-	(wire
-		(pts
 			(xy 49.53 96.52) (xy 64.77 96.52)
 		)
 		(stroke
@@ -2097,16 +1919,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 130.81) (xy 46.99 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3900e7f1-a476-4469-9a54-63f34cc97c3e")
-	)
-	(wire
-		(pts
 			(xy 49.53 81.28) (xy 64.77 81.28)
 		)
 		(stroke
@@ -2134,16 +1946,6 @@
 			(type default)
 		)
 		(uuid "652f1b37-72fa-4da5-9180-cd9e99215a5a")
-	)
-	(wire
-		(pts
-			(xy 54.61 139.7) (xy 52.07 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a868b8b-68b8-497b-814e-c67125dd13fa")
 	)
 	(wire
 		(pts
@@ -2357,16 +2159,6 @@
 	)
 	(wire
 		(pts
-			(xy 46.99 139.7) (xy 49.53 139.7)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f4c19b93-3a6a-4ea0-a000-582887fa5a92")
-	)
-	(wire
-		(pts
 			(xy 49.53 88.9) (xy 64.77 88.9)
 		)
 		(stroke
@@ -2376,8 +2168,8 @@
 		(uuid "f65cf8aa-d033-4664-bab7-265cadd7b444")
 	)
 	(rectangle
-		(start 43.18 137.16)
-		(end 101.6 148.59)
+		(start 74.93 138.43)
+		(end 104.14 149.86)
 		(stroke
 			(width 0)
 			(type dash)
@@ -2447,7 +2239,7 @@
 	)
 	(text "Wires to \"snap\" connectors on M48T59Y-70MH1"
 		(exclude_from_sim no)
-		(at 49.022 151.638 0)
+		(at 66.294 153.416 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2488,74 +2280,6 @@
 			(justify left)
 		)
 		(uuid "fde7cd67-8b8f-4ecc-aee1-77573f4182c7")
-	)
-	(symbol
-		(lib_id "Device:Crystal")
-		(at 50.8 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "124220ca-bb5e-4084-8554-56e58970a03f")
-		(property "Reference" "Y1"
-			(at 50.8 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "32.768 kHz"
-			(at 50.8 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Crystal:Crystal_C38-LF_D3.0mm_L8.0mm_Horizontal"
-			(at 50.8 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 50.8 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Two pin crystal"
-			(at 50.8 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "ce64d4a9-ae74-4c5b-a727-aa0e7167077d")
-		)
-		(pin "1"
-			(uuid "66bbe6ef-4849-46fd-b275-7038f2340be5")
-		)
-		(instances
-			(project ""
-				(path "/a5619b9c-2a1e-4dd3-8c34-92032ec8ab73"
-					(reference "Y1")
-					(unit 1)
-				)
-			)
-		)
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x14_Pin")
@@ -3480,76 +3204,6 @@
 			(project ""
 				(path "/a5619b9c-2a1e-4dd3-8c34-92032ec8ab73"
 					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
-		(at 49.53 144.78 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e525014b-19a8-4588-818d-61ea5d113473")
-		(property "Reference" "J3"
-			(at 53.34 142.8749 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "Conn_01x02_Pin"
-			(at 53.34 145.4149 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-			(at 49.53 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 49.53 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 49.53 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fdaf873e-507b-4b14-958a-90828f66e8ff")
-		)
-		(pin "2"
-			(uuid "a5fa87c8-f12f-4529-9dec-9ee1766fef4d")
-		)
-		(instances
-			(project ""
-				(path "/a5619b9c-2a1e-4dd3-8c34-92032ec8ab73"
-					(reference "J3")
 					(unit 1)
 				)
 			)
