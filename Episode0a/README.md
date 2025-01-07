@@ -94,6 +94,29 @@ using an Arduino Nano:
 There are two Arduino sketches (just load the one you want to use into the
 Arduino Nano.)
 
+Before you can use the Arduino sketches, you need to "install" the
+[m48t59y](m48t59y) library, which contains common definitions and functions
+used by all of the sketches. To do so, either symlink or copy the
+contents of the `m48t59y` directory into your `Arduino/libraries`
+directory. On my Linux system, I did this by running the commands
+
+```
+cd ~/Arduino
+mkdir -p libraries
+cd libraries
+ln -s ~/git/RandomStuff/Episode0a/m48t59y
+```
+
+You should replace `~/git/RandomStuff` with the path to where you checked
+out the [RandomStuff](https://github.com/daveho/RandomStuff/) repo.
+
+If you're using Windows, then I believe your `Arduino` directory
+will be in your `My Documents` folder. If you create a `libraries` folder
+(if it doesn't already exist and then copy the `m48t59y` directory there,
+that should work.
+
+These are the sketches:
+
 * [Test\_M48T59Y/Test\_M48T59Y.ino](Test_M48T59Y/Test_M48T59Y.ino):
   the test sketch (press GO to start the test; if you hold down LOG when
   you press GO any data validation errors will be logged)
