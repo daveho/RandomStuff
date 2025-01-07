@@ -116,8 +116,8 @@ out the [RandomStuff](https://github.com/daveho/RandomStuff/) repo.
 
 If you're using Windows, then I believe your `Arduino` directory
 will be in your `My Documents` folder. If you create a `libraries` folder
-(if it doesn't already exist) and then copy the `m48t59y` directory there,
-that should work.
+within the `Arduino` directory (if it doesn't already exist) and then copy
+the `m48t59y` directory there, that should work.
 
 These are the sketches:
 
