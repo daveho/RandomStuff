@@ -91,6 +91,10 @@ using an Arduino Nano:
 
 ![M48T59Y tester/programmer](img/tester_programmer.jpg)
 
+The [SunBladeNVRAMTest](SunBladeNVRAMTest) directory has the KiCad
+project for the circuit. There is a [PDF of the schematic](SunBladeNVRAMTest/SunBladeNVRAMTest.pdf)
+as well.
+
 There are two Arduino sketches (just load the one you want to use into the
 Arduino Nano.)
 
