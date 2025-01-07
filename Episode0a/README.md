@@ -129,5 +129,13 @@ These are the sketches:
   and MAC address, upload it to the Nano, then press GO to program the
   correct IDPROM information into the M48T59Y)
 * [Dump\_M48T59Y/Dump\_M49T59Y.ino](Dump_M48T59Y/Dump_M48T59Y.ino):
-  dump the NVRAM contents of an M48T59Y to the serial monitor as a
-  comma-separated list of hex values
+  dump the NVRAM contents of an M48T59Y to serial output as a
+  comma-separated list of hex values. Note that if you're using the
+  Arduino 2.x IDE [it's not possible to copy all captured data
+  from the serial monitor](https://github.com/arduino/arduino-ide/issues/1081)
+  so you'll need to use an external program (e.g., minicom) to capture
+  the output.
+* [Restore\_M48T59Y/Restore\_M48T59Y.ino](Restore_M48T59Y/Restore_M48T59Y.ino):
+  restore data (stored in a PROGMEM byte array in the sketch) to the M48T59Y.
+  Useful to replicate previously dumped data, e.g., reprogramming a device
+  after changing the battery.

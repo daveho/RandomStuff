@@ -1,5 +1,16 @@
 // Sketch to dump the NVRAM contents of an M48T59Y
 
+// Note: if you are using the Arduino 2.x IDE, it is not
+// possible to copy all of the captured data from the Serial
+// Monitor window:
+//
+//   https://github.com/arduino/arduino-ide/issues/1081
+//
+// So, you'll need to use an external program to capture
+// the output. I use minicom:
+//
+//   minicom --device /dev/ttyUSB0 -C dump.txt
+
 // Include common definitions and functions
 #include <m48t59y.h>
 
