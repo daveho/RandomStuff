@@ -95,7 +95,7 @@ The [SunBladeNVRAMTest](SunBladeNVRAMTest) directory has the KiCad
 project for the circuit. There is a [PDF of the schematic](SunBladeNVRAMTest/SunBladeNVRAMTest.pdf)
 as well.
 
-There are two Arduino sketches (just load the one you want to use into the
+There are several Arduino sketches (just load the one you want to use into the
 Arduino Nano.)
 
 Before you can use the Arduino sketches, you need to "install" the
@@ -128,3 +128,6 @@ These are the sketches:
   the programming sketch (edit the code to fill in the machine type information
   and MAC address, upload it to the Nano, then press GO to program the
   correct IDPROM information into the M48T59Y)
+* [Dump\_M48T59Y/Dump\_M49T59Y.ino](Dump_M48T59Y/Dump_M48T59Y.ino):
+  dump the NVRAM contents of an M48T59Y to the serial monitor as a
+  comma-separated list of hex values
