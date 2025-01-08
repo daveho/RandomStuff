@@ -7,9 +7,9 @@
 //   https://github.com/arduino/arduino-ide/issues/1081
 //
 // So, you'll need to use an external program to capture
-// the output. I use minicom:
+// the output. I use tio:
 //
-//   minicom --device /dev/ttyUSB0 -C dump.txt
+//   tio -b 115200 --log --log-file dump.txt /dev/ttyUSB0
 
 // Include common definitions and functions
 #include <m48t59y.h>
