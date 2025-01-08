@@ -104,7 +104,7 @@ void m48t59y_init() {
   m48t59y_configure_data_bus_for_read();
 
   // use serial output to report diagnostics
-  Serial.begin( 9600 );
+  Serial.begin( 115200 );
   while (!Serial);
 }
 
