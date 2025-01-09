@@ -129,7 +129,7 @@ These are the sketches:
   comma-separated list of hex values. Note that if you're using the
   Arduino 2.x IDE [it's not possible to copy all captured data
   from the serial monitor](https://github.com/arduino/arduino-ide/issues/1081)
-  so you'll need to use an external program (e.g., minicom) to capture
+  so you'll need to use an external program (e.g., minicom, tio, etc.) to capture
   the output.
 * [Restore\_M48T59Y/Restore\_M48T59Y.ino](Restore_M48T59Y/Restore_M48T59Y.ino):
   restore data (stored in a PROGMEM byte array in the sketch) to the M48T59Y.
