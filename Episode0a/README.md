@@ -124,10 +124,6 @@ These are the sketches:
 * [Test\_M48T59Y/Test\_M48T59Y.ino](Test_M48T59Y/Test_M48T59Y.ino):
   the test sketch (press GO to start the test; if you hold down LOG when
   you press GO any data validation errors will be logged)
-* [Program\_M48T59Y/Program\_M48T59Y.ino](Program_M48T59Y/Program_M48T59Y.ino):
-  the programming sketch (edit the code to fill in the machine type information
-  and MAC address, upload it to the Nano, then press GO to program the
-  correct IDPROM information into the M48T59Y)
 * [Dump\_M48T59Y/Dump\_M49T59Y.ino](Dump_M48T59Y/Dump_M48T59Y.ino):
   dump the NVRAM contents of an M48T59Y to serial output as a
   comma-separated list of hex values. Note that if you're using the
@@ -138,4 +134,10 @@ These are the sketches:
 * [Restore\_M48T59Y/Restore\_M48T59Y.ino](Restore_M48T59Y/Restore_M48T59Y.ino):
   restore data (stored in a PROGMEM byte array in the sketch) to the M48T59Y.
   Useful to replicate previously dumped data, e.g., reprogramming a device
-  after changing the battery.
+  after changing the battery. *Hypothetically* you can edit the IDPROM
+  data (the source code contains a working dump from a Sun Blade 100)
+  and program it to an M48T59Y. The "GO" button writes data to an M48T59Y,
+  and the "LOG" button just computes the IDPROM data checksum and
+  prints it to the serial output.
+
+Note that all of the sketches use 115200 as the serial baud rate.
