@@ -1,8 +1,21 @@
 // Restore the contents of an M48T59Y.
-// The values in the DATA array will be written
+
+// When you press the GO button,
+// the values in the DATA array will be written
 // to the NVRAM bytes of the M48T59Y.
 // (Note that you can use the Dump_M48T59Y sketch
-// to dump the contents of an M48T59Y.)
+// to dump the contents of an M48T59Y, then you can just
+// copy that output into the DATA array below.)
+
+// Another hypothetically valid way of using this program is
+// to edit the IDPROM values (look for the
+// "IDPROM data is here!!!" comment below), upload
+// the sketch, then press the LOG button. The serial
+// output will indicate the correct checksum byte for
+// your IDPROM data. Modify the checksum byte in the
+// DATA array, and in theory you should have valid IDPROM
+// contents to write to an M48T59Y. I have not tried doing
+// this, however.
 
 #include <avr/pgmspace.h>
 #include <m48t59y.h>
@@ -18,6 +31,7 @@ static const uint8_t DATA[M48T59Y_FIRST_REG] PROGMEM = {
   //
   // The machine type is 83, the MAC address is
   // 00:03:ba:14:fe:38, so the host ID is 8314fe38.
+
   0x0,0x0,0x40,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
   0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
   0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
@@ -527,8 +541,40 @@ static const uint8_t DATA[M48T59Y_FIRST_REG] PROGMEM = {
   0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
   0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
   0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
-  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x1,0x83,0x0,0x3,0xBA,0x14,0xFE,0x38,
-  0x0,0x0,0x0,0x0,0x14,0xFE,0x38,0x3B,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
+  
+  //----------------------------------------------------------------------
+
+  // IDPROM data is here!!!
+  // See:
+  //    https://github.com/MrSparc/idprom-repair
+  //    http://docs.smoe.org/sun/feh/docs/wcd00008/wcd00817.htm
+
+  // Format/version number. This is always 0x01
+  0x1,
+  
+  // Machine type. 0x83 for Sun Blade, 0x80 for Sun Ultra.
+  // For earlier Sparcstations, the machine type varies.
+  0x83,
+
+  // MAC address. My Sun Blade 100 has MAC address
+  //   00:03:ba:14:fe:38
+  0x0,0x3,0xBA,0x14,0xFE,0x38,
+  
+  // Manufacture date. Apparently you can just leave these
+  // bytes as all 0s.
+  0x0,0x0,0x0,0x0,
+  
+  // Last three bytes of hostid. These should be the same
+  // as the last three bytes of the MAC address.
+  0x14,0xFE,0x38,
+  
+  // Checksum: this is the bitwise-XOR of the previous IDPROM bytes.
+  0x3B,
+  
+  //----------------------------------------------------------------------
+
+  0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
 };
 
 void setup() {
@@ -563,8 +609,46 @@ void restore() {
     Serial.println( "verification failed" );
 }
 
-void loop() {
-  if ( (PINC & GO) == 0 ) {
-    restore();
+void checksum() {
+  uint16_t addr = 0x1fd8;
+
+  // start with first byte
+  uint8_t checksum = pgm_read_byte( &DATA[addr++] );
+  
+  // incorporate next 14 bytes using XOR
+  for ( uint8_t i = 0; i < 14; ++i )
+    checksum ^= pgm_read_byte( &DATA[addr++] );
+
+  Serial.print( "Computed IDPROM checksum: 0x" );
+  Serial.println( checksum, HEX );
+  
+  // check against the current checksum (in the DATA array)
+  uint8_t current_checksum = pgm_read_byte( &DATA[addr] );
+  if ( checksum == current_checksum )
+    Serial.println( "  Current checksum matches!" );
+  else {
+    Serial.print( "  Current checksum does not match (is 0x" );
+    Serial.print( current_checksum, HEX );
+    Serial.println ( ")" );
   }
+
+  // Wait a couple of seconds before returning,
+  // since this function will complete very quickly
+  delay( 2000 );
+}
+
+void loop() {
+  // Pressing the GO button writes the restore data to the NVRAM
+  if ( (PINC & GO) == 0 )
+    restore();
+
+  // Pressing the LOG button computes the checksum of the
+  // IDPROM data, and checks it against the the checksum byte
+  // in the restore data. IT DOES NOT ACCESS THE M48T59Y IN
+  // ANY WAY. This can be useful because you can set the
+  // MAC address/hostid bytes that you want, upload the
+  // sketch, press LOG, and it will determine the correct
+  // checksum value for you.
+  if ( (PINC & LOG) == 0 )
+    checksum();
 }
