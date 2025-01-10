@@ -1,8 +1,6 @@
 # Random Stuff, Episode 0xD
 
-*Note: this is work in progress and will be updated.*
-
-*Video link coming soon!*
+Link to video: <https://youtu.be/hTzB3pyzDiA>
 
 In this episode, we investigate the
 [M48T59Y](https://media.digikey.com/pdf/Data%20Sheets/ST%20Microelectronics%20PDFS/M48T59,Y_V.pdf)
